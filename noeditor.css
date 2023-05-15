@@ -1,0 +1,70 @@
+
+.mymove,.drag,.fa.fa-chevron-right.fa-1{
+display:none;
+}
+#mycontent{
+padding:0px;
+
+border:0px #ececec solid;
+
+
+width:920px;
+margin:0px auto;
+
+min-height:600px;
+border-radius:3px;
+overflow:hidden;
+
+text-align:left;
+
+
+
+}
+
+div.c1{
+
+width:910px;
+      display: block;
+      
+      
+clear:both;
+
+}
+
+
+#mycontent .pp{
+text-indent:4em;
+margin:4px;
+padding:4px;
+width:920px;
+    min-height: 90px;
+    display:block;
+    
+}
+
+.pp img{
+position:relative;
+margin:10px;
+border-radius:5px;
+vertical-align:text-bottom;
+}
+   
+.pp img.myimage{
+float:left;
+}
+   
+.pp img.myimageleft{
+float:left;
+}
+   
+.pp img.myimageright{
+float:right;
+}
+
+
+
+
+
+
+
+
