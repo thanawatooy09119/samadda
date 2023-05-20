@@ -280,48 +280,11 @@ echo '            <a href="#" onclick="return false;" class="buy" data-panda="'.
 
 } //end foreach
 ?>
-
 -->
 
+<hr>
 
-
-      
-      
-      
-      <hr />
-<h2>บอกเล่าเรื่องราว (Story)</h2>
-<?php
-
-$sql = "SELECT * FROM `$DBSOFTX`.`content` ORDER BY `id_content` DESC LIMIT 2";
-
-$on = $conn->query($sql);
-$_row = $on->num_rows;
-
-for($x=0;$x<$_row;$x++){
-
-
-echo '<div class="box2">';
-echo '<img src="img/thumbnails_'.i_result($on,$x,img1).'" style="border-radius:5px;">';
-echo '<p>';
-echo '<a href="story.php?id='.i_result($on,$x,id_content).'">';
-echo i_result($on,$x,title_content);
-echo '</a> ';
-echo '<br /> ';
-echo i_result($on,$x,des_content);
-echo '<br /> ';
-echo '<br /> ';
-echo '</p>';
-echo '<a href="story.php?id='.i_result($on,$x,id_content).'">Continue reading →</a>';
-//echo '<div style="text-align:left;">';
-//echo '</div>';
-echo '</div>';
-
-}
-?>
-      
-      <hr>
-      
-      <a href="story.php">เรื่องราวที่น่าสนใจอื่นๆ</a>
+<a href="story.php">เรื่องราวที่น่าสนใจอื่นๆ</a>
       
 <hr />
 </div>
