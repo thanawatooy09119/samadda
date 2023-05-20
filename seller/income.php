@@ -99,7 +99,7 @@ include "./menuadmin.inc.php";
 
 <div class="inheader">
     <!-- <span class="fa fa-home" style="font-size:22px"></span> -->
-        <a href="./" class="curent"><span class="imade">สมัดดา</span><span class="ibrick">ผ้าทอมือ</span></a>
+        <a href="./" class="curent"><span class="imade">สมัดดาผ้าทอมือ</span><span class="ibrick"></span></a>
         <span class="no">&nbsp;</span>
 
 <h4 align="center">สรุปรายงานรายรับร้านสมัดดาผ้าทอมือ แสดง ณ วันที่: <script>document.write(new Date().toLocaleDateString());</script></h4>

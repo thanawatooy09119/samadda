@@ -24,7 +24,7 @@
 
     <div class="inheader">
     <!-- <span class="fa fa-home" style="font-size:22px"></span> -->
-    <img src="images/123456.jpg" alt="" width="50" height="30"><a href="./" class="curent"><span class="imade">สมัดดา</span><span class="ibrick">ผ้าทอมือ</span></a>
+    <img src="images/123456.jpg" alt="" width="50" height="30"><a href="./" class="curent"><span class="imade">สมัดดาผ้าทอมือ</span><span class="ibrick"></span></a>
         <span class="no">&nbsp;</span> 
         
         
@@ -119,7 +119,7 @@
 
  <div  class="loginform">
  <form id="loginform">
-  <h5 style="text-align:center;"><span class="imadelogo">สมัดดา</span><span class="ibricklogo">ผ้าทอมือ</span> (เข้าสู่ระบบ)</h5>
+  <h5 style="text-align:center;"><span class="imadelogo">สมัดดาผ้าทอมือ</span><span class="ibricklogo"></span> (เข้าสู่ระบบ)</h5>
   <div class="ihr"></div>
   <input type="text" name="firstname" class="customerusername" placeholder="ชื่อผู้ใช้งาน (username)" />
         <br/>
@@ -145,7 +145,7 @@
 
 <div  class="regisform">
  <form id="regisform">
-  <h5 style="text-align:center;"><span class="imadelogo">สมัดดา</span><span class="ibricklogo">ผ้าทอมือ</span> (สมัครสมาชิก)</h5>
+  <h5 style="text-align:center;"><span class="imadelogo">สมัดดาผ้าทอมือ</span><span class="ibricklogo"></span> (สมัครสมาชิก)</h5>
 
   <div class="ihr"></div>
   <input type="text" name="firstname" class="regisuser" placeholder="ชื่อผู้ใช้งาน (username)" />
@@ -178,7 +178,7 @@
 
 <div  class="settingform">
  <form id="settingform">
-  <h5 style="text-align:center;"><span class="imadelogo">สมัดดา</span><span class="ibricklogo">ผ้าทอมือ</span> (ตั้งค่าผู้ใช้งาน)</h5>
+  <h5 style="text-align:center;"><span class="imadelogo">สมัดดาผ้าทอมือ</span><span class="ibricklogo"></span> (ตั้งค่าผู้ใช้งาน)</h5>
 
   <div class="ihr"></div>
   <input type="text" name="firstname" class="settinguser" placeholder="ชื่อผู้ใช้งาน (username)" value="<?=$_SESSION['myuser'];?>" disabled />

@@ -10,6 +10,8 @@ exit();
 <?php
 include "../connect.inc.php";
 include "../i_result.inc.php";
+
+$category= "category";
 ?>
 <!DOCTYPE html>
 <head>
@@ -69,118 +71,39 @@ document.getElementById('glr').innerHTML += "<a href=\""+im1+"\" target=\"_blank
 <?php 
 include "./menuadmin.inc.php";
 
-
-
 ?>
 
 
-
-
-<form action="insert_product_sell.php" method="post" name="m2" id="m2">
+<form action="category_insert.php" method="post" name="m2" id="m2">
 <table border="0" cellpadding="0" cellspacing="0" id="addproduct">
 <tr>
       <td>
-                        ชื่อสินค้า : ขนาด :
+                        ชื่อประเภทสินค้า:
 
       </td>
       <td>
-      <input type="text" name="namep" />
+      <input type="text" name="name" value=""  />
+      
       
 
       </td>
-      
-</tr>
-<tr>
-      <td>
-                        ประเภทสินค้า :
-
-      </td>
-      <td>
-      <select name="typep">
-          <option value="null">กรุณาเลือก</option>
-          <option value="shirt">เสื้อ</option>
-       
-          <option value="sarong">ผ้าซิ่น</option>    
-        
-        <option value="skirt">กระโปรง</option>
-        
-        <option value="sabai">สไบ</option>
-
-      </select>
-
-      </td>
-</tr>
+</tr> 
 
 <tr>
       <td>
-                        ประเภทสินค้า :
+                        รายละเอียดประเภทสินค้า :
 
       </td>
       <td>
-      <input type="text" name="namep" />
+      <input type="text" name="detail" value="" />
       
 
       </td>
-      
 </tr>
-<tr>
-      <td>
-                        ราคา :
-
-      </td>
-      <td>
-      <!-- <input type="text" name="dprice" style="color:#a00;text-decoration:line-through;" placeholder="ราคาปกติ" > -->
-      <input type="text" name="price" placeholder="ราคา" >
-
-      </td>
-</tr>
-<tr>
-      <td nowrap>
-                        จำนวนสินค้าทั้งหมด (ถ้ามี) :
-
-      </td>
-      <td>
-      
-      <input type="text" name="stockp" value="0" >
-
-      </td>
-</tr>
-<tr>
-      <td>
-                        รายละเอียด :
-
-      </td>
-      <td>
-      <textarea cols="50" rows="5" name="desp">
-      </textarea>
-
-      </td>
-</tr>
-
-<tr>
-      <td colspan="2" align="center" style="text-align:center;">
-                        รูปภาพ (ไม่เกิน 5 รูป) :
-<b>Image Gallery</b> , Click <span class="glr2">Browse</span> image.
-      <hr class="clr" />
-        <div id="glr"></div>
-    <div id="hid">
-    <?php
-    for($i=1;$i<=5;$i++){
-    echo '<input type="hidden" name="big'.$i.'" value="" />';
-    echo '<input type="hidden" name="small'.$i.'" value="" />';
-    }
-    ?>
-    </div>
-      
-     
-      </td>
-</tr>
-
 <tr>
       <td colspan="2"  style="text-align:center;">
-             
-             
-        <input type="submit" value="+ Add new product">
+                  
+        <input type="submit" value="เพิ่มประเภทสินค้า">
 
       </td>
 </tr>

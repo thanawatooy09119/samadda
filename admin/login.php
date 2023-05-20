@@ -148,7 +148,7 @@ span.psw {
       <!-- <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span> -->
        
   <div class="orangehr"></div>
-  <h4 style="text-align:center;"><span class="imadelogo">สมัดดา</span><span class="ibricklogo">ผ้าทอมือ</span></h4> 
+  <h4 style="text-align:center;"><span class="imadelogo">สมัดดาผ้าทอมือ</span><span class="ibricklogo"></span></h4> 
   
   <h5 style="text-align:center;">ระบบจัดการหลังบ้าน (Backend)</h5>
   <div class="orangehr"></div>

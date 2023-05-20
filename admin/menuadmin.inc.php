@@ -21,10 +21,12 @@
     
     
     <span class="headlist">ประเภทสินค้า<i class="fa fa-angle-double-right "></i></span>    
-    <a href="manufacturing_new.php"><i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มประเภทสินค้า</a> 
+    <a href="category.php"><i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มประเภทสินค้า</a> 
     <!-- <a href="all_manufacturing.php"><i class="fa fa-list" aria-hidden="true"></i> การผลิตทั้งหมด (All manufacturing)</a> -->
 
     <hr class="ihr" />
+
+
 
 
 

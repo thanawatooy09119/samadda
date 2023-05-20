@@ -49,7 +49,7 @@ include "menuadmin.inc.php";
 
 <div  class="myhome">
     
-  <h5 style="text-align:center;"><span class="imadelogo">สมัดดา</span><span class="ibricklogo">ผ้าทอมือ</span></h5> 
+  <h5 style="text-align:center;"><span class="imadelogo">สมัดดาผ้าทอมือ</span><span class="ibricklogo"></span></h5> 
   
   <div class="uhr"></div>
   <h5 style="text-align:center;">ระบบจัดการหลังบ้าน (Backend)</h5>
