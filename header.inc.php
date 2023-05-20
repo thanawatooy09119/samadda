@@ -24,7 +24,7 @@
 
     <div class="inheader">
     <!-- <span class="fa fa-home" style="font-size:22px"></span> -->
-    <img src="images/123456.jpg" alt="description_of_your_image" width="50" height="30"><a href="./" class="curent"><span class="imade">สมัดดา</span><span class="ibrick">ผ้าทอมือ</span></a>
+    <img src="images/123456.jpg" alt="" width="50" height="30"><a href="./" class="curent"><span class="imade">สมัดดา</span><span class="ibrick">ผ้าทอมือ</span></a>
         <span class="no">&nbsp;</span> 
         
         
@@ -190,6 +190,8 @@
   <div class="ihr"></div>
   <input type="text" name="fullname" class="settingfullname" placeholder="ชื่อ - สกุล" value="<?=$_SESSION['myname'];?>"  />
   <input type="text" name="address" class="settingaddress" placeholder="ที่อยู่" value="<?=$_SESSION['myaddress'];?>"  />
+
+
   <input type="text" name="tel" class="settingtel" placeholder="เบอร์โทร" value="<?=$_SESSION['mytel'];?>"  />
   <div class="ihr"></div>
 

@@ -78,7 +78,7 @@ include "./menuadmin.inc.php";
 <table border="0" cellpadding="0" cellspacing="0" id="addproduct">
 <tr>
       <td>
-                        รายการที่ผลิต (Name of manufacturing) :
+                        ชื่อรายการที่ผลิต  :
 
       </td>
       <td>
@@ -91,7 +91,7 @@ include "./menuadmin.inc.php";
 
 <tr>
       <td>
-                        จำนวน (Quantity : QTY) :
+                        จำนวน (ชิ้น) :
 
       </td>
       <td>
@@ -103,7 +103,28 @@ include "./menuadmin.inc.php";
 
 <tr>
       <td>
-                        สถานะ (Status) :
+                        ประเภทสินค้า :
+
+      </td>
+      <td>
+      <select name="mytype">
+          <option value="null">กรุณาเลือก</option>
+          <option value="shirt">เสื้อ</option>
+       
+          <option value="sarong">ผ้าซิ่น</option>    
+        
+        <option value="skirt">กระโปรง</option>
+        
+        <option value="sabai">สไบ</option>
+
+      </select>
+
+      </td>
+</tr>
+
+<tr>
+      <td>
+                        สถานะ  :
 
       </td>
       <td>

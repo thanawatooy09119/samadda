@@ -45,11 +45,12 @@ $_myid = $_list[1];
 $_date = date("Y-m-d"); //ok
 $_myname = $_POST['myuser']; //ok
 $_qty = $_POST['myname']; //ok
+$_mytype = $_POST['mytype']; //ok
 $_mystatus = $_POST['mystatus']; //ok
 
 
     
-    $update_sql = "INSERT INTO  `$DBSOFTX`.`$TB_NAME` (`id_$TB_NAME` ,`time_$TB_NAME` ,`name_$TB_NAME` ,`qty_$TB_NAME` ,`status_$TB_NAME`)VALUES(NULL ,  '$_date',  '$_myname',  '$_qty',  '$_mystatus');";
+    $update_sql = "INSERT INTO  `$DBSOFTX`.`$TB_NAME` (`id_$TB_NAME` ,`time_$TB_NAME` ,`name_$TB_NAME` ,`qty_$TB_NAME` ,`status_$TB_NAME`,`type_$TB_NAME`)VALUES(NULL ,  '$_date',  '$_myname',  '$_qty',  '$_mystatus',  '$_mytype');";
 
 
 

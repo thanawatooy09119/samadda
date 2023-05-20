@@ -68,100 +68,101 @@ document.getElementById('glr').innerHTML += "<a href=\""+im1+"\" target=\"_blank
 <body>
 <?php 
 include "./menuadmin.inc.php";
-// $_list = explode("171",$_GET['id']);
-// $id_admin = $_list[1];
-$id_admin = $_SESSION['adminid'];
-
-$sql = "select * from admin where id_admin = '$id_admin'";
-$on = $conn->query($sql);
-$_rows = $on->num_rows;
-if($_rows!=1){echo '<br><center>ไม่พบสมาชิก</center>'; exit();}
-
-
-$_status = i_result($on,0,status_admin);
-
 ?>
 
 
-<form action="admin_setting_update.php" method="post" name="m2" id="m2">
+<form action="insert_product_sell.php" method="post" name="m2" id="m2">
 <table border="0" cellpadding="0" cellspacing="0" id="addproduct">
 <tr>
       <td>
-                        ชื่อผู้ใช้ (Username) :
+                        ชื่อสินค้า : ขนาด :
 
       </td>
       <td>
-      <input type="text" name="myuser" value="<?=i_result($on,0,user_admin);?>" disabled />
-      <input type="hidden" name="idp" value="<?=$_GET['id'];?>" />
+      <input type="text" name="namep" />
       
 
       </td>
-</tr> 
-<tr>
-      <td>
-                        รหัสผ่าน (Password) :
-
-      </td>
-      <td>
-      <input type="password" name="mypass" value="" placeholder="ไม่เปลี่ยนแปลง (กรุณาเว้นว่างไว้)" style="border:1px #c0c0c0 solid;color:red;" />
       
-
-      </td>
 </tr>
 <tr>
       <td>
-                        ชื่อ - สกุล (Fullname) :
+                        ประเภทสินค้า :
 
       </td>
       <td>
-      <input type="text" name="myname" value="<?=i_result($on,0,name_admin);?>" />
-      
-      
+      <select name="typep">
+          <option value="null">กรุณาเลือก</option>
+          <option value="shirt">เสื้อ</option>
+       
+          <option value="sarong">ผ้าซิ่น</option>    
+        
+        <option value="skirt">กระโปรง</option>
+        
+        <option value="sabai">สไบ</option>
 
-      </td>
-</tr>
-
-<tr>
-      <td>
-                        สถานะ (Status) :
-
-      </td>
-      <td>
-      <select name="mystatus">
-          <option value="yes"<?php if($_status=="yes"){echo ' selected';}?>>อนุญาต</option>
-          <option value="no"<?php if($_status=="no"){echo ' selected';}?>>ปิดใช้งาน</option>
       </select>
 
       </td>
 </tr>
 <tr>
       <td>
-                        โทรศัพท์ (Tel.) :
+                        ราคา :
 
       </td>
       <td>
-      <input type="text" name="mytel" value="<?=i_result($on,0,tel_admin);?>" />
+      <!-- <input type="text" name="dprice" style="color:#a00;text-decoration:line-through;" placeholder="ราคาปกติ" > -->
+      <input type="text" name="price" placeholder="ราคา" >
+
+      </td>
+</tr>
+<tr>
+      <td nowrap>
+                        จำนวนสินค้าทั้งหมด (ถ้ามี) :
+
+      </td>
+      <td>
       
+      <input type="text" name="stockp" value="0" >
 
       </td>
 </tr>
 <tr>
       <td>
-                        ที่อยู่ (Address) :
+                        รายละเอียด :
 
       </td>
       <td>
-      <textarea cols="50" rows="5" name="myaddress"><?=i_result($on,0,address_admin);?></textarea>
+      <textarea cols="50" rows="5" name="desp">
+      </textarea>
 
       </td>
 </tr>
 
+<tr>
+      <td colspan="2" align="center" style="text-align:center;">
+                        รูปภาพ (ไม่เกิน 5 รูป) :
+<b>Image Gallery</b> , Click <span class="glr2">Browse</span> image.
+      <hr class="clr" />
+        <div id="glr"></div>
+    <div id="hid">
+    <?php
+    for($i=1;$i<=5;$i++){
+    echo '<input type="hidden" name="big'.$i.'" value="" />';
+    echo '<input type="hidden" name="small'.$i.'" value="" />';
+    }
+    ?>
+    </div>
+      
+     
+      </td>
+</tr>
 
 <tr>
       <td colspan="2"  style="text-align:center;">
              
              
-        <input type="submit" value="แก้ไขสมาชิก">
+        <input type="submit" value="+ Add new product">
 
       </td>
 </tr>

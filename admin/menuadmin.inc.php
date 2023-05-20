@@ -3,7 +3,7 @@
 <div id="admin" class="dontshowprn">
 
 <div class="dropdown">
-    <a href="./" class="fa fa-home" aria-hidden="true">&nbsp;</a>   
+<img src="images/123456.jpg" alt="" width="50" height="30"> <a href="./" class="fa fa-home" aria-hidden="true">&nbsp;</a>   
     
 </div>
 
@@ -11,23 +11,30 @@
   <button class="dropbtn product">สินค้า/การผลิต<i class="fa fa-caret-down"></i></button>
   <div class="dropdown-content">
 
-  
+  <span class="headlist"> manufacturing <i class="fa fa-angle-double-right "></i></span>    
+    <a href="manufacturing_new.php"><i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มการผลิต (New manufacturing)</a> 
+    <a href="all_manufacturing.php"><i class="fa fa-list" aria-hidden="true"></i> การผลิตทั้งหมด (All manufacturing)</a>
   
   <span class="headlist"> products  <i class="fa fa-angle-double-right "></i></span>
     <a href="add_product.php"><i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มสินค้าใหม่ (New product)</a>
-    <a href="allproduct.php"><i class="fa fa-list" aria-hidden="true"></i> รายการสินค้าทั้งหมด (All products)</a>   
+    <a href="allproduct.php"><i class="fa fa-list" aria-hidden="true"></i> รายการสินค้าทั้งหมด (All products)</a> 
+    
+    
+    <span class="headlist">ประเภทสินค้า<i class="fa fa-angle-double-right "></i></span>    
+    <a href="manufacturing_new.php"><i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มประเภทสินค้า</a> 
+    <!-- <a href="all_manufacturing.php"><i class="fa fa-list" aria-hidden="true"></i> การผลิตทั้งหมด (All manufacturing)</a> -->
 
     <hr class="ihr" />
 
-    <span class="headlist"> materials <i class="fa fa-angle-double-right "></i></span>
+
+
+    <!-- <span class="headlist"> materials <i class="fa fa-angle-double-right "></i></span> -->
     
     <!-- <a href="add_material.php"><i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มวัสดุใหม่ (New material)</a> 
     <a href="allmaterial.php"><i class="fa fa-list" aria-hidden="true"></i> วัสดุทั้งหมด (All Materials)</a>  
     <hr class="ihr" /> -->
     
-    <span class="headlist"> manufacturing <i class="fa fa-angle-double-right "></i></span>    
-    <a href="manufacturing_new.php"><i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มการผลิต (New manufacturing)</a> 
-    <a href="all_manufacturing.php"><i class="fa fa-list" aria-hidden="true"></i> การผลิตทั้งหมด (All manufacturing)</a>
+    
 
   </div>
 </div>

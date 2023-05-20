@@ -127,6 +127,9 @@ include "./menuadmin.inc.php";
     <th>
              สถานะ
     </th> 
+    <th>
+             วางขาย
+    </th> 
 </tr>
 <?php
 $sql = "SELECT * FROM  `$DBSOFTX`.`$TBNAME` ORDER BY `$TBNAME`.`id_$TBNAME` DESC;";
@@ -187,9 +190,8 @@ echo '<font color="#880000">ยกเลิกการผลิต</font>';
 
 
 echo '</td>';
-
-echo '</tr>';
-
+echo '<td id="bill_171'.$id_product.'">';
+echo '<a href="add_product_sell.php?id=171'.$id_product.'">วางจำหน่าย</a>';
 
 
 

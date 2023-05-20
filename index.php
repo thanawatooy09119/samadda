@@ -24,7 +24,7 @@ include "./i_result.inc.php";
 </head>
 <body>
 <div class="main">
-<img src="images/105.jpg" alt="Forest" class="w3-opacity-min"width="900" height="300">
+<img src="images/105.jpg" alt="Forest" class="w3-opacity-min"width="850" height="300">
 <!-- <img src="images/555.jpg"> -->
 <?php
 include "header.inc.php";

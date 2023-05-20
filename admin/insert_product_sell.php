@@ -28,7 +28,7 @@ include "../i_result.inc.php";
 <link rel="stylesheet" href="../style.css" type="text/css">
 <script>
 setTimeout(function(){
-window.location.replace("add_product_sell.php");
+window.location.replace("add_product.php");
 },3000);
 
 </script>
