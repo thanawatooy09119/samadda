@@ -8,7 +8,7 @@
 </div>
 
 <div class="dropdown">
-  <button class="dropbtn product">สินค้า/การผลิต<i class="fa fa-caret-down"></i></button>
+<h3><button class="dropbtn product">สินค้า/การผลิต<i class="fa fa-caret-down"></i></button></h3>
   <div class="dropdown-content">
 
   <span class="headlist"> manufacturing <i class="fa fa-angle-double-right "></i></span>    
@@ -20,7 +20,7 @@
     <a href="allproduct.php"><i class="fa fa-list" aria-hidden="true"></i> รายการสินค้าทั้งหมด (All products)</a> 
     
     
-    <span class="headlist">ประเภทสินค้า<i class="fa fa-angle-double-right "></i></span>    
+    <span class="headlist">ประเภทสินค้า<i class="fa fa-angle-double-right "></i></span>   
     <a href="category.php"><i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มประเภทสินค้า</a> 
     <!-- <a href="all_manufacturing.php"><i class="fa fa-list" aria-hidden="true"></i> การผลิตทั้งหมด (All manufacturing)</a> -->
 
@@ -43,7 +43,7 @@
 
 
 <div class="dropdown">
-  <button class="dropbtn order">คำสั่งซื้อ <i class="fa fa-caret-down"></i></button>
+  <h3><button class="dropbtn order">คำสั่งซื้อ <i class="fa fa-caret-down"></i></button></h3>
   <div class="dropdown-content">
     <a href="allorder.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i> คำสั่งซื้อสินค้า (Product Order)</a>
     <!-- <a href="allorder_material.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i> คำสั่งซื้อวัสดุ (Material Order)</a> -->
@@ -51,7 +51,7 @@
 </div>
 
 <div class="dropdown">
-  <button class="dropbtn report">สรุปรายงาน<i class="fa fa-caret-down"></i></button>
+<h3><button class="dropbtn report">สรุปรายงาน<i class="fa fa-caret-down"></i></button></h3>
   <div class="dropdown-content">
 
   <span class="headlist"> financial <i class="fa fa-angle-double-right "></i></span>
@@ -70,7 +70,7 @@
 
 
 <div class="dropdown">
-  <button class="dropbtn article">ข่าวประชาสัมพันธ์ <i class="fa fa-caret-down"></i></button>
+<h3><button class="dropbtn article">ข่าวประชาสัมพันธ์ <i class="fa fa-caret-down"></i></button></h3>
   <div class="dropdown-content">
     <a href="content_new.php"><i class="fa fa-plus-circle" aria-hidden="true"></i> เขียนข่าวประชาสัมพันธ์ (New Content)</a>
     <a href="howto_edit.php"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> วิธีการสั่งซื้อ (How to buy Content)</a>
@@ -81,7 +81,7 @@
 
 
 <div class="dropdown">
-  <button class="dropbtn bred">สมาชิก<i class="fa fa-caret-down"></i></button>
+<h3><button class="dropbtn bred">สมาชิก<i class="fa fa-caret-down"></i></button></h3>
   <div class="dropdown-content">
     <a href="customer_new.php"><i class="fa fa-user-plus"></i> เพิ่มลูกค้าสมาชิก (New Member)</a>
     <a href="customer_all.php"><i class="fa fa-users"></i> สมาชิกทั้งหมด (AllMember)</a>
@@ -89,7 +89,7 @@
 </div>
 
 <div class="dropdown">
-  <button class="dropbtn bpink">ฝ่ายขาย<i class="fa fa-caret-down"></i></button>
+<h3><button class="dropbtn bpink">ฝ่ายขาย<i class="fa fa-caret-down"></i></button></h3>
   <div class="dropdown-content">
     <a href="seller_new.php"><i class="fa fa-user-plus"></i> เพิ่มฝ่ายขาย (New Seller)</a>
     <a href="seller_all.php"><i class="fa fa-users"></i> ฝ่ายขายทั้งหมด (All Seller)</a>
@@ -122,7 +122,7 @@
 
 
 <div class="dropdown">
-  <button class=""><?php
+<button class=""><?php
                 if($_SESSION['adminuser']){
                    echo ' <div class="dropdown2">
              <h3> <a href="#">สวัสดี:&nbsp;'.$_SESSION['adminname'].'&nbsp;<span></span></a> </h3>  
