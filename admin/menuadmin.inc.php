@@ -3,7 +3,7 @@
 <div id="admin" class="dontshowprn">
 
 <div class="dropdown">
-<img src="images/123456.jpg" alt="" width="50" height="30"> <a href="./" class="fa fa-home" aria-hidden="true">&nbsp;</a>   
+<img src="../images/123456.jpg" alt="" width="50" height="30"> <a href="./" class="fa fa-home" aria-hidden="true">&nbsp;</a>   
     
 </div>
 
@@ -21,7 +21,8 @@
     
     
     <span class="headlist">ประเภทสินค้า<i class="fa fa-angle-double-right "></i></span>   
-    <a href="category.php"><i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มประเภทสินค้า</a> 
+    <a href="category.php"><i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มประเภทสินค้า</a>
+    <a href="all_category.php"><i class="fa fa-list" aria-hidden="true"></i> ประเภทสินค้าทั้งหมด</a> 
     <!-- <a href="all_manufacturing.php"><i class="fa fa-list" aria-hidden="true"></i> การผลิตทั้งหมด (All manufacturing)</a> -->
 
     <hr class="ihr" />
@@ -95,31 +96,6 @@
     <a href="seller_all.php"><i class="fa fa-users"></i> ฝ่ายขายทั้งหมด (All Seller)</a>
   </div>
 </div>
-
-
-
-<!-- <div class="dropdown">
-
-
-  <button class="dropbtn byellow">ฝ่ายผลิต<i class="fa fa-caret-down"></i></button>
-  <div class="dropdown-content">
-  <span class="headlist"> production <i class="fa fa-angle-double-right "></i></span>
-
-    <a href="production_new.php"><i class="fa fa-user-plus"></i> เพิ่มฝ่ายผลิต (New Production)</a>
-    <a href="production_all.php"><i class="fa fa-users"></i> ฝ่ายผลิตทั้งหมด (All Production)</a>
-    
-
-  </div>
-</div> -->
-
-<!-- <div class="dropdown">
-  <button class="dropbtn bsky">ผู้ผลิต<i class="fa fa-caret-down"></i></button>
-  <div class="dropdown-content">
-    <a href="supplier_new.php"><i class="fa fa-user-plus"></i> เพิ่มผู้ผลิต (New Supplier)</a>
-    <a href="supplier_all.php"><i class="fa fa-users"></i> ผู้ผลิตทั้งหมด (All Supplier)</a>
-  </div>
-</div> -->
-
 
 <div class="dropdown">
 <button class=""><?php

@@ -17,7 +17,7 @@ $Pass = "1234567899";
 
 $Db1 = "Samadda";
 
-		$DBSOFTX = "Samadda";
+		$DBSOFTX = "samadda";
 
 $URL = "http://".$_SERVER['HTTP_HOST']."/Samadda.com/";
 

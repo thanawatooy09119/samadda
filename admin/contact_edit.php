@@ -112,9 +112,7 @@ $( function() {
 
 
 
-<!-- END TOOLS -->
-
-document.getElementById("mycontent").spellcheck = false;
+document.getElementById("mycontent").spellcheck == false;
 document.getElementById("mycontent").focus();
 document.getElementById("mycontent").blur();
     

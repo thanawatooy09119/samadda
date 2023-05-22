@@ -49,8 +49,9 @@ $_mytype = $_POST['mytype']; //ok
 $_mystatus = $_POST['mystatus']; //ok
 
 
+
     
-    $update_sql = "INSERT INTO  `$DBSOFTX`.`$TB_NAME` (`id_$TB_NAME` ,`time_$TB_NAME` ,`name_$TB_NAME` ,`qty_$TB_NAME` ,`status_$TB_NAME`,`type_$TB_NAME`)VALUES(NULL ,  '$_date',  '$_myname',  '$_qty',  '$_mystatus',  '$_mytype');";
+    $update_sql = "INSERT INTO  `$DBSOFTX`.`$TB_NAME` (`id_$TB_NAME` ,`time_$TB_NAME` ,`name_$TB_NAME` ,`qty_$TB_NAME` ,`status_$TB_NAME`,`type_$TB_NAME`,)VALUES(NULL ,  '$_date',  '$_myname',  '$_qty',  '$_mystatus',  '$_mytype');";
 
 
 

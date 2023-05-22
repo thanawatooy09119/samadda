@@ -117,13 +117,16 @@ include "./menuadmin.inc.php";
     </th>
     <th>
              รายการผลิต
-    </th>    
+    </th>  
+     
     <th>
              จำนวนรวม
     </th>      
     <th>
            &nbsp;  
-    </th>     
+    </th>   
+   
+    
     <th>
              สถานะ
     </th> 
@@ -149,8 +152,11 @@ echo i_result($on,$x,"name_$TBNAME");
 
 echo '</td>';
 
+echo '</td>';
+
 echo '<td style="font-weight:bold;">'.number_format(i_result($on,$x,"qty_$TBNAME")).'</td>';
 echo '<td>';
+
 
 
 echo '</td>';

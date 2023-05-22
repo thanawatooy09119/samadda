@@ -96,31 +96,12 @@ include "./menuadmin.inc.php";
 
       </td>
       <td>
-      <select name="typep">
-          <option value="null">กรุณาเลือก</option>
-          <option value="shirt">เสื้อ</option>
-       
-          <option value="sarong">ผ้าซิ่น</option>    
-        
-        <option value="skirt">กระโปรง</option>
-        
-        <option value="sabai">สไบ</option>
-
-      </select>
 
       </td>
 </tr>
 
 <tr>
-      <td>
-                        ประเภทสินค้า :
-
-      </td>
-      <td>
-      <input type="text" name="namep" />
       
-
-      </td>
       
 </tr>
 <tr>

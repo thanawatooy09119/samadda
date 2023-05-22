@@ -1,7 +1,3 @@
-
-
-
-
 $(document).ready(function() {
 
         
@@ -105,12 +101,16 @@ $(document).ready(function() {
             
             address.fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
             address.focus();
-        }else 
-        if(tel.val()==""){
-            
-            tel.fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
-            tel.focus();
-        }else 
+        }else
+
+        if (isNaN(tel.val())) {
+          } else if (tel.val() == "") {
+                tel.fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+                tel.focus();
+              }else if(!tel.val().Math(/^([0-9])+$/i)){
+                $('.registel').text('กรุณากรอกตัวเลขเบอร์โทร')
+              }
+        else 
         if(password.val()!=confirm.val()){
             
             $('.regisstatus').text('ยืนยันรหัสผ่านไม่ตรงกัน');
@@ -165,6 +165,8 @@ $(document).ready(function() {
         var fullname = $('.settingfullname');
         var address = $('.settingaddress');
         var tel = $('.settingtel');
+        
+
 
         // if(username.val()==""){
             
@@ -181,6 +183,8 @@ $(document).ready(function() {
         //     confirm.fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
         //     confirm.focus();
         // }else 
+
+        
         if(fullname.val()==""){
             
             fullname.fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
@@ -234,7 +238,8 @@ $(document).ready(function() {
       
         
                 }); 
-        }//end check empty
+        }
+        //end check empty
 
 
         }); // end setting submit
@@ -299,6 +304,8 @@ $(document).ready(function() {
         $('body').trigger('click');
         
         $('.customerusernamesetting').focus();
+
+        
 
            
            

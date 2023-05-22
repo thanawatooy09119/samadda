@@ -24,7 +24,10 @@
 
     <div class="inheader">
     <!-- <span class="fa fa-home" style="font-size:22px"></span> -->
-    <img src="images/123456.jpg" alt="" width="50" height="30"><a href="./" class="curent"><span class="imade">สมัดดาผ้าทอมือ</span><span class="ibrick"></span></a>
+
+    <!-- <?php phpinfo(); ?> -->
+
+    <img src="images/123456.jpg" alt="" width="50" height="30"><a href="./" class="dropbtn2"><span ></span><span class="dropbtn2">สมัดดาผ้าทอมือ</span></a>
         <span class="no">&nbsp;</span> 
         
         
