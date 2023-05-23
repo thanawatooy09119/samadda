@@ -12,6 +12,7 @@ include "../connect.inc.php";
 include "../i_result.inc.php";
 
 $TB_NAME = "manufacturing";
+
 ?>
 
  <!DOCTYPE html>
@@ -49,22 +50,19 @@ $_mytype = $_POST['mytype']; //ok
 $_mystatus = $_POST['mystatus']; //ok
 
 
-
-    
-    $update_sql = "INSERT INTO  `$DBSOFTX`.`$TB_NAME` (`id_$TB_NAME` ,`time_$TB_NAME` ,`name_$TB_NAME` ,`qty_$TB_NAME` ,`status_$TB_NAME`,`type_$TB_NAME`,)VALUES(NULL ,  '$_date',  '$_myname',  '$_qty',  '$_mystatus',  '$_mytype');";
-
-
-
-
-
+    // $update_sql = "INSERT INTO  `$DBSOFTX`.`$TB_NAME` (`id_$TB_NAME` ,`time_$TB_NAME` ,`name_$TB_NAME` ,`qty_$TB_NAME` ,`status_$TB_NAME`,`type_$TB_NAME`,)VALUES(NULL ,  '$_date',  '$_myname',  '$_qty',  '$_mystatus',  '$_mytype');";
+    $update_sql = "INSERT INTO `$DBSOFTX`.`manufacturing` (`time_manufacturing`, `name_manufacturing`, `qty_manufacturing`, `status_manufacturing`, `type_manufacturing`)
+    VALUES ('$_date', '$_myname', '$_qty', '$_mystatus', '$_mytype');";
+  
 $on = $conn->query($update_sql);
 
 if($on){
 
 $chk_ok = "ok";
 }else{
-
-$chk_ok = "no";
+    $chk_ok = "no";
+    // echo $on;
+// $chk_ok = $on;
 }
 
 
@@ -72,7 +70,10 @@ $chk_ok = "no";
 
 <div class="result"><?php
 if($chk_ok=="ok"){echo 'Create New '.$TB_NAME.' complete.';}else{
+
 echo 'Fail!';
+echo $update_sql;
+// echo $chk_ok;
 
 }
 

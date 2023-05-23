@@ -92,14 +92,17 @@ include "./menuadmin.inc.php";
 
 <table border="0" cellpadding="1" cellspacing="1" id="allorder" align="center">
 <tr>
-    <th>
+    <!-- <th>
               ลำดับ
-    </th>
+    </th> -->
     <th>
               ประเภทสินค้า
     </th>
-    <th>
+    <!-- <th>
               รายละเอียด
+    </th> -->
+    <th>
+             แก้ไข
     </th>
 </tr>
 <?php
@@ -112,16 +115,21 @@ if ($result->num_rows > 0) {
     $_name = $row["name"];
     $_detail = $row["detail"];
 
-    echo '<tr>';
-    echo '<th style="max-width:400px;text-align:center;">' . $_id . '</th>';
+    
+    // echo '<th style="max-width:400px;text-align:center;">' . $_id . '</th>';
     echo '<td>' . $_name . '</td>';
-    echo '<td>' . $_detail . '</td>';
+    echo '<td>';echo '<a href="edit_category.php?id=171'.$_id.'">EDIT</a>';
+    // echo '<td>' . $_detail . '</td>';
+    
     echo '</tr>';
   }
 } else {
   echo "<tr><td colspan='3'>No categories found.</td></tr>";
 }
 ?>
+
+
+
 
 </table>
 <br>
