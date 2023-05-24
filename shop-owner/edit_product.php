@@ -125,32 +125,33 @@ include "../i_result.inc.php";
                         </td>
                   </tr>
                   <tr>
+                  
                         <td>
                               ประเภทสินค้า :
 
                         </td>
                         <td>
-    <select name="category_id" onchange="updateCategoryName(this)">
-        <option value="null">กรุณาเลือก</option>
+                              <select name="category_id" onchange="updateCategoryName(this)">
+                                    <option value="null">กรุณาเลือก</option>
 
-        <?php
-        // Iterate over the categories and generate options
-        foreach ($categories as $category) {
-            $category_name = $category['name'];
-            $category_id = $category['id'];
+                                    <?php
+                                    // Iterate over the categories and generate options
+                                    foreach ($categories as $category) {
+                                          $category_name = $category['name'];
+                                          $category_id = $category['id'];
 
-            // Check if the current category is selected
-            $selected = ($_type == $category_name) ? 'selected' : '';
-          
-            // Output the option tag
-            echo '<option value="' . $category_id . '" ' . $selected . '>' . $category_name . '</option>';
-        }
-        ?>
-    </select>
-    <input type="hidden" name="category_name" id="category_name" value="<?php echo $_type; ?>">
+                                          // Check if the current category is selected
+                                          // $selected = ($_type == $category_name) ? 'selected' : '';
+                                     // Check if the current category is selected
+                                $selected = (i_result($on, 0, category_id) == $category_id) ? 'selected' : '';
 
-
-</td>
+                                          // Output the option tag
+                                          echo '<option value="' . $category_id . '" ' . $selected . '>' . $category_name . '</option>';
+                                    }
+                                    ?>
+                              </select>
+                              <input type="hidden" name="category_name" id="category_name" value="<?php echo $_type; ?>">
+                              </td>
 
 
 
