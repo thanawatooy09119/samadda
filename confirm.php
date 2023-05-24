@@ -40,7 +40,7 @@ $_order = $_GET['order'];
                             &nbsp; กรอกรหัสสินค้า<input type="text" value=" <?= $_order; ?>" name="orderid" id="orderid" />
                         </td>
                         <td>
-                            &nbsp; <input type="submit" name="find" value="FIND" class="find" />
+                            &nbsp; <input type="button" name="find" value="FIND" class="find" />
                         </td>
                     </tr>
 
@@ -102,7 +102,7 @@ $_order = $_GET['order'];
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <input type="button" value="ยืนยันการชำระสินค้า" id="res3" style="display:none;">
+                            <input type="submit" value="ยืนยันการชำระสินค้า" id="res3" style="display:none;">
                         </td>
                     </tr>
                 </table>

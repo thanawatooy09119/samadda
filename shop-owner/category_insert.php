@@ -27,9 +27,9 @@ $category = "category";
 <?php
 $_id = $_list[1];
 $_name = $_POST['name'];
-$_detail = $_POST['detail'];
+// $_detail = $_POST['detail'];
 
-$insert_sql = "INSERT INTO `$DBSOFTX`.`category` (`id`, `name`, `detail`) VALUES (NULL, '$_name', '$_detail');";
+$insert_sql = "INSERT INTO `$DBSOFTX`.`category` (`id`, `name`) VALUES (NULL, '$_name');";
 
 $on = $conn->query($insert_sql);
 

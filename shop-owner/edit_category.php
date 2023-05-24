@@ -90,8 +90,8 @@ $_name = i_result($on,0,name);
 
       </td>
       <td>
-      <input type="text" name="namep" value="<?=i_result($on,0,name);?>" />
-      <input type="hidden" name="idp" value="<?=$_GET['id'];?>" />
+      <input type="text" name="name" value="<?=i_result($on,0,name);?>" />
+      <input type="hidden" name="id" value="<?=$_GET['id'];?>" />
 
       </td>
 </tr>

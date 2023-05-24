@@ -122,7 +122,7 @@ include "./menuadmin.inc.php";
     </th> 
 </tr>
 <?php
-$sql = "SELECT * FROM  `product`";
+$sql = "SELECT * FROM  `product` ORDER BY id_product DESC";
 $on = $conn->query($sql);
 $_row = $on->num_rows;
 for($x=0;$x<$_row;$x++){

@@ -89,7 +89,7 @@ include "./menuadmin.inc.php";
       </td>
 </tr> 
 
-<tr>
+<!-- <tr>
       <td>
                         รายละเอียดประเภทสินค้า :
 
@@ -99,7 +99,7 @@ include "./menuadmin.inc.php";
       
 
       </td>
-</tr>
+</tr> -->
 <tr>
       <td colspan="2"  style="text-align:center;">
                   
