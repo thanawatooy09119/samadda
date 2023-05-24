@@ -82,19 +82,19 @@
 
 
 <div class="dropdown">
-<h3><button class="dropbtn bred">สมาชิก<i class="fa fa-caret-down"></i></button></h3>
+<!-- <h3><button class="dropbtn bred">สมาชิก<i class="fa fa-caret-down"></i></button></h3>
   <div class="dropdown-content">
     <a href="customer_new.php"><i class="fa fa-user-plus"></i> เพิ่มลูกค้าสมาชิก (New Member)</a>
     <a href="customer_all.php"><i class="fa fa-users"></i> สมาชิกทั้งหมด (AllMember)</a>
-  </div>
+  </div> -->
 </div>
 
 <div class="dropdown">
-<h3><button class="dropbtn bpink">ฝ่ายขาย<i class="fa fa-caret-down"></i></button></h3>
+<!-- <h3><button class="dropbtn bpink">ฝ่ายขาย<i class="fa fa-caret-down"></i></button></h3>
   <div class="dropdown-content">
     <a href="seller_new.php"><i class="fa fa-user-plus"></i> เพิ่มฝ่ายขาย (New Seller)</a>
     <a href="seller_all.php"><i class="fa fa-users"></i> ฝ่ายขายทั้งหมด (All Seller)</a>
-  </div>
+  </div> -->
 </div>
 
 <div class="dropdown">
@@ -108,7 +108,7 @@
           ?>
 <div class="dropdown"><i class="fa fa-caret-down"></i></button>
   <div class="dropdown-content">
-    <a href="admin_new.php"><i class="fa fa-user-plus"></i> เพิ่มผู้ดูแลระบบ (New Admin/CEO)</a>
+    <!-- <a href="admin_new.php"><i class="fa fa-user-plus"></i> เพิ่มผู้ดูแลระบบ (New Admin/CEO)</a> -->
     <a href="admin_all.php"><i class="fa fa-users"></i> ผู้ดูแล ทั้งหมด (All Admin/CEO)</a>
     
     <a href="admin_setting.php"><i class="fa fa-cogs"></i> ตั้งค่าผู้ใช้งาน (Setting)</a>
