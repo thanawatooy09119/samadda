@@ -16,8 +16,8 @@ $message = $_POST['message'];
 //  $_myid = $_SESSION['myid'];
 
 
-$_list = explode("171",$_POST['idp']);
-$_myid = $_list[1];
+
+$_myid = $_POST['idp'];
 
 
 
