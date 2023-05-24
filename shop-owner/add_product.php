@@ -71,7 +71,7 @@ include "../i_result.inc.php";
 <body>
   <?php
   include "./menuadmin.inc.php";
-
+ 
   $sql = "SELECT * FROM `category`";
   $on_category = $conn->query($sql);
   // print_r($on_category);

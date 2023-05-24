@@ -70,6 +70,20 @@ document.getElementById('glr').innerHTML += "<a href=\""+im1+"\" target=\"_blank
 <body>
 <?php 
 include "./menuadmin.inc.php";
+$sql = "SELECT * FROM `category`";
+$on_category = $conn->query($sql);
+// print_r($on_category);
+$_rows_category = $on_category->num_rows;
+
+if ($_rows_category <= 0) {
+  echo '<br><center>ไม่พบประเภทสินค้า</center>';
+  exit();
+}
+
+// // Fetch all categories into an array
+$categories = $on_category->fetch_all(MYSQLI_ASSOC);
+// print_r($categories);
+$_type = "";
 
 ?>
 
@@ -107,19 +121,23 @@ include "./menuadmin.inc.php";
 
       </td>
       <td>
-      <select name="mytype">
-          <option value="null">กรุณาเลือก</option>
-          <option value="shirt">เสื้อ</option>
-       
-          <option value="sarong">ผ้าซิ่น</option>    
-        
-        <option value="skirt">กระโปรง</option>
-        
-        <option value="sabai">สไบ</option>
+        <select name="category_id" onchange="updateCategoryName(this)">
+            <option value="null">กรุณาเลือก</option>
+         
+            <?php
+            // Iterate over the categories and generate options
+            foreach ($categories as $category) {
+              $category_name = $category['name'];
+              $category_id = $category['id'];
 
-      </select>
+              // Output the option tag
+              echo '<option value="' . $category_id . '" ' . $selected . '>' . $category_name . '</option>';
+            }
+            ?>
+          </select>
+          <input type="hidden" name="category_name" id="category_name" value="<?php echo $_type; ?>">
+        </td>
 
-      </td>
 </tr>
 
 <tr>
@@ -176,7 +194,13 @@ include "./menuadmin.inc.php";
 		<script src="assets/js/script.js"></script>
 						
 						<!-- end GLR -->
-
+            <script>
+    function updateCategoryName(selectElement) {
+      var selectedOption = selectElement.options[selectElement.selectedIndex];
+      var category_name = selectedOption.text;
+      document.getElementById('category_name').value = category_name;
+    }
+  </script>
 
 
 </body>
