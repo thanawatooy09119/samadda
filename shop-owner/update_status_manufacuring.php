@@ -12,7 +12,7 @@ include "../connect.inc.php";
 include "../i_result.inc.php";
 ?>
 <?php
-$_id = end(explode("171",$_POST['code']));
+$_id = $_POST['code'];
 $_status = $_POST['status'];
 $TBNAME = "manufacturing";
 

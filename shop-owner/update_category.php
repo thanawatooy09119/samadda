@@ -18,8 +18,8 @@ include "../i_result.inc.php";
 
 <?php
 
-$_list = explode("171",$_POST['idp']);
-$_id = $_list[1];
+
+$_id =$_POST['idp'];
 ?>
 
     <meta http-equiv="refresh" content="3;URL=all_category.php?id=171<?=$_id;?>" />  
