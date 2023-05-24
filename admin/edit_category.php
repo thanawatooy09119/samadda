@@ -68,8 +68,8 @@ document.getElementById('glr').innerHTML += "<a href=\""+im1+"\" target=\"_blank
 <body>
 <?php 
 include "./menuadmin.inc.php";
-$_list = explode("171",$_GET['id']);
-$_id = $_list[1];
+
+$_id = $_GET['id'];
 
 $sql = "select * from category where id = '$_id'";
 $on = $conn->query($sql);

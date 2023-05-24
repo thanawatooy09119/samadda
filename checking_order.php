@@ -7,8 +7,8 @@ exit;}
 include "connect.inc.php";
 include "i_result.inc.php";
 
-$sp_order = explode("171",$_POST['order']);
-$_id = $sp_order['1'];
+// $sp_order = explode("",$_POST['order']);
+$_id =$_POST['order'];
 
 $sql = "SELECT * FROM `$DBSOFTX`.`order` WHERE 	`id_order` = '$_id'";
 $on = $conn->query($sql);
@@ -109,6 +109,3 @@ echo 'ไม่พบรายการ ';
 
 
 echo '|#|'.$_data;
-
-
-?>

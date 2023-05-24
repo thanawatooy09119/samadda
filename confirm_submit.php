@@ -17,8 +17,9 @@ include "i_result.inc.php";
 
 <?php
 
-$sp_order = explode("171", $_POST['orderid']);
-$order_id = $sp_order['1'];
+
+$order_id = $_POST['orderid'];
+
 $_bank = $_POST['pay'];
 $time_paid = $_POST['time'];
 //echo $_FILES['img']['name'];

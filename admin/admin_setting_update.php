@@ -18,7 +18,7 @@ include "../i_result.inc.php";
 
 <?php
 
-// $_list = explode("171",$_POST['idp']);
+
 $_id = $_SESSION['adminid'];
 ?>
 

@@ -68,8 +68,7 @@ document.getElementById('glr').innerHTML += "<a href=\""+im1+"\" target=\"_blank
 <body>
 <?php 
 include "./menuadmin.inc.php";
-$_list = explode("171",$_GET['id']);
-$id_customer = $_list[1];
+$id_customer = $_GET['id'];
 
 $sql = "select * from customer where id_customer = '$id_customer'";
 $on = $conn->query($sql);

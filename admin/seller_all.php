@@ -159,7 +159,7 @@ if($_status=="yes"){echo 'อนุญาต';}else{echo 'ปิดการใ�
 echo '</td>';
 echo '<td id="edit_2020'.$_id.'">';
 
-echo '<a href="'.$TB_NAME.'_edit.php?id=171'.$_id.'">EDIT</a>';
+echo '<a href="'.$TB_NAME.'_edit.php?id='.$_id.'">EDIT</a>';
 
 echo '</td>';
 

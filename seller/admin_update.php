@@ -18,11 +18,11 @@ include "../i_result.inc.php";
 
 <?php
 
-$_list = explode("171",$_POST['idp']);
-$_id = $_list[1];
+
+$_id = $_POST['idp'];
 ?>
 
-    <meta http-equiv="refresh" content="3;URL=admin_edit.php?id=171<?=$_id;?>" />  
+    <meta http-equiv="refresh" content="3;URL=admin_edit.php?id=<?=$_id;?>" />  
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../css/font-awesome.min.css">

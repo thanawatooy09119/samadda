@@ -144,7 +144,7 @@ $_status = i_result($on,$x,"status_$TBNAME");
 $id_order = i_result($on,$x,"id_$TBNAME");
 echo '<tr>';
 echo '<td>'.($x+1).'</td>';
-echo '<td>171'.$id_order.'</td>';
+echo '<td>'.$id_order.'</td>';
 echo '<td>'.i_result($on,$x,"time_$TBNAME").'</td>';
 echo '<td>';
 
@@ -160,23 +160,23 @@ echo '<td>';
 
 
 echo '</td>';
-echo '<td id="bill_171'.$id_order.'">';
+echo '<td id="bill_'.$id_order.'">';
 if($_status=="wait"){
 
-echo '<a href="#" class="st-wait" onclick="return false;" data-panda="171'.$id_order.'">';
+echo '<a href="#" class="st-wait" onclick="return false;" data-panda="'.$id_order.'">';
 echo 'กำลังผลิต';
 echo '</a>';
 
 }else
 if($_status=="checking"){
 
-echo '<a href="#" class="st-checking" onclick="return false;" data-panda="171'.$id_order.'">';
+echo '<a href="#" class="st-checking" onclick="return false;" data-panda="'.$id_order.'">';
 echo 'กำลังผลิต';
 echo '</a>';
 
 }else
 if($_status=="sending"){
-echo '<a href="#" class="st-sending" onclick="return false;" data-panda="171'.$id_order.'">';
+echo '<a href="#" class="st-sending" onclick="return false;" data-panda="'.$id_order.'">';
 echo 'รอตรวจสอบ';
 echo '</a>';
 
@@ -196,8 +196,8 @@ echo '<font color="#880000">ยกเลิกการผลิต</font>';
 
 
 echo '</td>';
-echo '<td id="bill_171'.$id_product.'">';
-echo '<a href="add_product_sell.php?id=171'.$id_product.'">วางจำหน่าย</a>';
+echo '<td id="bill_'.$id_product.'">';
+echo '<a href="add_product_sell.php?id='.$id_product.'">วางจำหน่าย</a>';
 
 
 

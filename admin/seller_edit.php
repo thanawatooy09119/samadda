@@ -68,7 +68,7 @@ document.getElementById('glr').innerHTML += "<a href=\""+im1+"\" target=\"_blank
 <body>
 <?php 
 include "./menuadmin.inc.php";
-$_list = explode("171",$_GET['id']);
+$_list = explode("",$_GET['id']);
 $_id = $_list[1];
 $TB_NAME = "seller";
 $sql = "select * from $TB_NAME where id_$TB_NAME = '$_id'";

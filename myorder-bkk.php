@@ -142,23 +142,23 @@ echo '<a href="../'.i_result($on,$x,"img_paid").'" target="_blank">ดูรู�
 }
 
 echo '</td>';
-echo '<td id="bill_171'.$id_order.'">';
+echo '<td id="bill_'.$id_order.'">';
 if($_status=="wait"){
 
-echo '<a href="#" class="st-wait" onclick="return false;" data-panda="171'.$id_order.'">';
+echo '<a href="#" class="st-wait" onclick="return false;" data-panda="'.$id_order.'">';
 echo 'ยังไม่ได้ส่งหลักฐาน';
 echo '</a>';
 
 }else
 if($_status=="checking"){
 
-echo '<a href="#" class="st-checking" onclick="return false;" data-panda="171'.$id_order.'">';
+echo '<a href="#" class="st-checking" onclick="return false;" data-panda="'.$id_order.'">';
 echo 'รอตรวจสอบ';
 echo '</a>';
 
 }else
 if($_status=="sending"){
-echo '<a href="#" class="st-sending" onclick="return false;" data-panda="171'.$id_order.'">';
+echo '<a href="#" class="st-sending" onclick="return false;" data-panda="'.$id_order.'">';
 echo 'ดำเนินการจัดส่ง';
 echo '</a>';
 

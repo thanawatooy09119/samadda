@@ -2,7 +2,7 @@
 
 <?php
 if(!$_GET['order']){exit();}
-$id_order = end(explode("171",$_GET['order']));
+$id_order = $_GET['order'];
 
 include "./connect.inc.php";
 include "./i_result.inc.php";
@@ -106,7 +106,7 @@ $_row = $on->num_rows;
     
           if($_row==1){
           echo '<p style="padding-left:20px;text-align:left;">';
-          echo 'รหัสสั่งซื้อ : <b>171'.i_result($on,0,id_order).'</b>';
+          echo 'รหัสสั่งซื้อ : <b>'.i_result($on,0,id_order).'</b>';
           echo '<br />';
           echo 'จำนวนรายการ :  <b>'.i_result($on,0,list_order).' รายการ</b>';
           echo '<br />';

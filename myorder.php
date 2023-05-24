@@ -168,7 +168,7 @@ echo 'รอตรวจสอบ';
 
 }else
 if($_status=="sending"){
-// echo '<a href="#" class="st-sending" onclick="return false;" data-panda="171'.$id_order.'">';
+// echo '<a href="#" class="st-sending" onclick="return false;" data-panda="'.$id_order.'">';
 echo 'ดำเนินการจัดส่ง';
 // echo '</a>';
 
