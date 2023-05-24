@@ -18,7 +18,6 @@ include "../i_result.inc.php";
 
 <?php
 
-
 $_id = $_POST['idp'];
 
 

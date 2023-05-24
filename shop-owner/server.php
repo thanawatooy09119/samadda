@@ -16,8 +16,7 @@ $message = $_POST['message'];
 //  $_myid = $_SESSION['myid'];
 
 
-
-$_myid = $_POST['idp'];
+$_myid =$_POST['idp'];
 
 
 
