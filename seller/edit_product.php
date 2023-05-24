@@ -70,154 +70,189 @@ document.getElementById('glr').innerHTML += "<a href=\""+im1+"\" target=\"_blank
 include "./menuadmin.inc.php";
 
 $id_produt = $_GET['id'];
-
+   
 $sql = "select * from product where id_product = '$id_produt'";
+
 $on = $conn->query($sql);
 $_rows = $on->num_rows;
-if($_rows!=1){echo '<br><center>ไม่พบสินค้า</center>'; exit();}
+if ($_rows != 1) {
+      echo '<br><center>ไม่พบสินค้า</center>';
+      exit();
+}
 
-$_type = i_result($on,0,type_product);
-$_status = i_result($on,0,status_product);
+$sql = "SELECT * FROM `category`";
+$on_category = $conn->query($sql);
+// print_r($on_category);
+$_rows_category = $on_category->num_rows;
+
+if ($_rows_category <= 0) {
+    echo '<br><center>ไม่พบประเภทสินค้า</center>';
+    exit();
+}
+
+// // Fetch all categories into an array
+$categories = $on_category->fetch_all(MYSQLI_ASSOC);
+
+
+// $sql_category = "select * from category";
+// $on_category = $conn->query($sql_category);
+// $_rows_category = $on_category->num_rows;
+// if ($_rows_category != 1) {
+//       echo '<br><center>ไม่พบประเภทสินค้า</center>';
+//       exit();
+// }
+
+$_type = i_result($on, 0, type_product);
+$_status = i_result($on, 0, status_product);
+// $id_produt = $_GET['id'];
+
+// $sql = "select * from product where id_product = '$id_produt'";
+// $on = $conn->query($sql);
+// $_rows = $on->num_rows;
+// if($_rows!=1){echo '<br><center>ไม่พบสินค้า</center>'; exit();}
+
+// $_type = i_result($on,0,type_product);
+// $_status = i_result($on,0,status_product);
 
 ?>
 
 
 <form action="update_product.php" method="post" name="m2" id="m2">
-<table border="0" cellpadding="0" cellspacing="0" id="addproduct">
-<tr>
-      <td>
-                        ชื่อสินค้า :
+            <table border="0" cellpadding="0" cellspacing="0" id="addproduct">
+                  <tr>
+                        <td>
+                              ชื่อสินค้า :
 
-      </td>
-      <td>
-      <input type="text" name="namep" value="<?=i_result($on,0,name_product);?>" />
-      <input type="hidden" name="idp" value="<?=$_GET['id'];?>" />
+                        </td>
+                        <td>
+                              <input type="text" name="namep" value="<?= i_result($on, 0, name_product); ?>" />
+                              <input type="hidden" name="idp" value="<?= $_GET['id']; ?>" />
 
-      </td>
-</tr>
-<tr>
-      <td>
-                        ประเภทสินค้า :
+                        </td>
+                  </tr>
+                  <tr>
+                  
+                        <td>
+                              ประเภทสินค้า :
 
-      </td>
-      <td>
-      <select name="typep">
-          <option value="null">กรุณาเลือก</option>
-          <option value="shirt"<?php if($_type=="shirt"){echo ' selected';}?>>เสื้อ</option>
-       
-          <option value="sarong"<?php if($_type=="sarong"){echo ' selected';}?>>ผ้าซิ่น</option>    
-        
-            <option value="skirt"<?php if($_type=="skirt"){echo ' selected';}?>>กระโปรง</option> 
-            <option value="sabai"<?php if($_type=="sabai"){echo ' selected';}?>>สไบ</option>
+                        </td>
+                        <td>
+                              <select name="category_id" onchange="updateCategoryName(this)">
+                                    <option value="null">กรุณาเลือก</option>
 
+                                    <?php
+                                    // Iterate over the categories and generate options
+                                    foreach ($categories as $category) {
+                                          $category_name = $category['name'];
+                                          $category_id = $category['id'];
 
-        
-        <!-- <option value="refractorybrick"<?php if($_type=="refractorybrick"){echo ' selected';}?>>อิฐทนไฟ</option> 
+                                          // Check if the current category is selected
+                                          // $selected = ($_type == $category_name) ? 'selected' : '';
+                                     // Check if the current category is selected
+                                $selected = (i_result($on, 0, category_id) == $category_id) ? 'selected' : '';
 
-
-        
-        <option value="blockbrick"<?php if($_type=="blockbrick"){echo ' selected';}?>>อิฐบล็อก</option> 
-
-        
-        <option value="laterite"<?php if($_type=="laterite"){echo ' selected';}?>>ศิลาแลง</option> 
-
-        
-        <option value="claytile"<?php if($_type=="claytile"){echo ' selected';}?>>กระเบื้องดินเผา</option> 
-        <option value="others"<?php if($_type=="others"){echo ' selected';}?>>อื่นๆ</option>  -->
-      </select>
+                                          // Output the option tag
+                                          echo '<option value="' . $category_id . '" ' . $selected . '>' . $category_name . '</option>';
+                                    }
+                                    ?>
+                              </select>
+                              <input type="hidden" name="category_name" id="category_name" value="<?php echo $_type; ?>">
+                              </td>
 
 
 
-      </td>
-</tr>
+                  </tr>
 
-<tr>
-      <td>
-                        สถานะ :
+                  <tr>
+                        <td>
+                              สถานะ :
 
-      </td>
-      <td>
-      <select name="statusp">
-          <option value="yes"<?php if($_status=="yes"){echo ' selected';}?>>แสดง</option>
-          <option value="no"<?php if($_status=="no"){echo ' selected';}?>>ไม่แสดง</option>
-      </select>
+                        </td>
+                        <td>
+                              <select name="statusp">
+                                    <option value="yes" <?php if ($_status == "yes") {
+                                                                  echo ' selected';
+                                                            } ?>>แสดง</option>
+                                    <option value="no" <?php if ($_status == "no") {
+                                                                  echo ' selected';
+                                                            } ?>>ไม่แสดง</option>
+                              </select>
 
-      </td>
-</tr>
-<tr>
-      <td>
-                        ราคา :
+                        </td>
+                  </tr>
+                  <tr>
+                        <td>
+                              ราคา :
 
-      </td>
-      <td>
-      <input type="text" name="dprice" style="color:#a00;text-decoration:line-through;" placeholder="ราคาปกติ" value="<?=i_result($on,0,dprice_product);?>" >
-      <input type="text" name="price" placeholder="ลดเหลือ" value="<?=i_result($on,0,price_product);?>" >
+                        </td>
+                        <td>
+                              <input type="text" name="dprice" style="color:#a00;text-decoration:line-through;" placeholder="ราคาปกติ" value="<?= i_result($on, 0, dprice_product); ?>">
+                              <input type="text" name="price" placeholder="ลดเหลือ" value="<?= i_result($on, 0, price_product); ?>">
 
-      </td>
-</tr>
-<tr>
-      <td nowrap>
-                        จำนวนสินค้าทั้งหมด :
+                        </td>
+                  </tr>
+                  <tr>
+                        <td nowrap>
+                              จำนวนสินค้าทั้งหมด :
 
-      </td>
-      <td>
-      
-      <input type="text" name="stockp" value="<?=i_result($on,0,stock_product);?>" >
+                        </td>
+                        <td>
 
-      </td>
-</tr>
-<tr>
-      <td>
-                        รายละเอียด :
+                              <input type="text" name="stockp" value="<?= i_result($on, 0, stock_product); ?>">
 
-      </td>
-      <td>
-      <textarea cols="50" rows="5" name="desp">
-       <?=i_result($on,0,des_product);?>
+                        </td>
+                  </tr>
+                  <tr>
+                        <td>
+                              รายละเอียด :
+
+                        </td>
+                        <td>
+                              <textarea cols="50" rows="5" name="desp">
+       <?= i_result($on, 0, des_product); ?>
       </textarea>
 
-      </td>
-</tr>
+                        </td>
+                  </tr>
 
-<tr>
-      <td colspan="2" align="center" style="text-align:center;">
-                        รูปภาพ (ไม่เกิน 5 รูป) :
-<b>Image Gallery</b> , Click <span class="glr2">Browse</span> image.
-      <hr class="clr" />
-        <div id="glr">
-        <?php
-        
-    for($i=1;$i<=5;$i++){
-    $_img = "img".$i;
-            echo '<a href="../img/'.i_result($on,0,$_img).'" target="_blank"><img src="../img/thumbnails_'.i_result($on,0,$_img).'"></a>';
-    
-    }
-        
-        ?>
-        
-        </div>
-    <div id="hid">
-    <?php
-    for($i=1;$i<=5;$i++){
-    $_img = "img".$i;
-    echo '<input type="hidden" name="big'.$i.'" value="../img/'.i_result($on,0,$_img).'" />';
-    echo '<input type="hidden" name="small'.$i.'" value="../img/thumbnails_'.i_result($on,0,$_img).'" />';
-    }
-    ?>
-    </div>
-      
-     
-      </td>
-</tr>
+                  <tr>
+                        <td colspan="2" align="center" style="text-align:center;">
+                              รูปภาพ (ไม่เกิน 5 รูป) :
+                              <b>Image Gallery</b> , Click <span class="glr2">Browse</span> image.
+                              <hr class="clr" />
+                              <div id="glr">
+                                    <?php
 
-<tr>
-      <td colspan="2"  style="text-align:center;">
-             
-             
-        <input type="submit" value="Update product">
+                                    for ($i = 1; $i <= 5; $i++) {
+                                          $_img = "img" . $i;
+                                          echo '<a href="../img/' . i_result($on, 0, $_img) . '" target="_blank"><img src="../img/thumbnails_' . i_result($on, 0, $_img) . '"></a>';
+                                    }
 
-      </td>
-</tr>
+                                    ?>
+
+                              </div>
+                              <div id="hid">
+                                    <?php
+                                    for ($i = 1; $i <= 5; $i++) {
+                                          $_img = "img" . $i;
+                                          echo '<input type="hidden" name="big' . $i . '" value="../img/' . i_result($on, 0, $_img) . '" />';
+                                          echo '<input type="hidden" name="small' . $i . '" value="../img/thumbnails_' . i_result($on, 0, $_img) . '" />';
+                                    }
+                                    ?>
+                              </div>
+
+
+                        </td>
+                  </tr>
+
+                  <tr>
+                        <td colspan="2" style="text-align:center;">
+
+
+                              <input type="submit" value="Update product">
+
+                        </td>
+                  </tr>
 
 </table>
 </form>
