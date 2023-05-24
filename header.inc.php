@@ -1,5 +1,8 @@
 <?php session_start(); ?>
 <?php
+include("./connect.inc.php");
+
+
 # Check DIR
 //$dir_current = end(explode("\\",getcwd()));
 //print(getcwd());

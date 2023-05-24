@@ -24,9 +24,6 @@ $on = $conn->query($sql);
     <meta name="theme-color" content="#505050">
 
     <link rel="stylesheet" type="text/css" href="./noeditor.css">
-
-
-
     <meta name="viewport" content="widtd=device-widtd, initial-scale=1">
     <link rel="stylesheet" href="css/font-awesome.min.css">
 

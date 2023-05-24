@@ -118,7 +118,7 @@ if ($result->num_rows > 0) {
     
     // echo '<th style="max-width:400px;text-align:center;">' . $_id . '</th>';
     echo '<td>' . $_name . '</td>';
-    echo '<td>';echo '<a href="edit_category.php?id=171'.$_id.'">EDIT</a>';
+    echo '<td>';echo '<a href="edit_category.php?id='.$_id.'">EDIT</a>';
     // echo '<td>' . $_detail . '</td>';
     
     echo '</tr>';
