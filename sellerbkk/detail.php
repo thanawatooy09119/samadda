@@ -10,7 +10,7 @@ exit();
 
 <?php
 if(!$_GET['order']){exit();}
-$id_order = end(explode("171",$_GET['order']));
+$id_order = $_GET['order'];
 
 include "../connect.inc.php";
 include "../i_result.inc.php";

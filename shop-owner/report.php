@@ -159,13 +159,9 @@ for($x=0;$x<$_row;$x++){
 echo '<tr>';
 echo '<td>'.($_count).'</td>';
 echo '<td>'.i_result($on,$x,"time_order").'</td>';
-echo '<td>171'.$id_order.'</td>';
+echo '<td>'.$id_order.'</td>';
 echo '<td>';
-// echo '<a href="detail.php?order=171'.$id_order.'" target="_blank">';
-// echo i_result($on,$x,"list_order");
-// echo ' / ';
-// echo i_result($on,$x,"qty_order");
-// echo '</a>';
+
 echo '</td>';
 
 echo '<td style="font-weight:bold;">'.number_format($_price).'</td>';
@@ -180,38 +176,11 @@ echo '<td>';
         // }
 
         echo '</td>';
-        echo '<td id="bill_171'.$id_order.'">';
-        // if($_status=="wait"){
-
-        // echo '<a href="#" class="st-wait" onclick="return false;" data-panda="171'.$id_order.'">';
-        // echo 'ยังไม่ได้ส่งหลักฐาน';
-        // echo '</a>';
-
-        // }else
-        // if($_status=="checking"){
-
-        // echo '<a href="#" class="st-checking" onclick="return false;" data-panda="171'.$id_order.'">';
-        // echo 'รอตรวจสอบ';
-        // echo '</a>';
-
-        // }else
-        // if($_status=="sending"){
-        // echo '<a href="#" class="st-sending" onclick="return false;" data-panda="171'.$id_order.'">';
-        // echo 'ดำเนินการจัดส่ง';
-        // echo '</a>';
+        echo '<td id="bill_'.$id_order.'">';
+        
 
 
-        // }else
-        // if($_status=="complete"){
-        // echo '<font color="#008800">จัดส่งแล้ว</font>';
-
-
-
-        // }else{
-
-        // echo '<font color="#880000">ยกเลิกแล้ว</font>';
-
-        // }
+        
 
 
 echo '</td>';

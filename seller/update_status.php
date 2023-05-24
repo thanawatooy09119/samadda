@@ -12,8 +12,8 @@ include "../connect.inc.php";
 include "../i_result.inc.php";
 ?>
 <?php
-$_id = end(explode("171",$_POST['code']));
-$_status = $_POST['status'];
+
+$_status = $_POST['code'];
 
 $sql = "UPDATE  `$DBSOFTX`.`order` SET  `status_order` =  '".$_status."' WHERE  `order`.`id_order` = '".$_id."' LIMIT 1 ;";
 $on = $conn->query($sql);

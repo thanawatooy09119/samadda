@@ -160,7 +160,7 @@ if($status_customer=="yes"){echo 'อนุญาต';}else{echo 'ปิดก�
 echo '</td>';
 echo '<td id="edit_2020'.$id_customer.'">';
 
-echo '<a href="customer_edit.php?id=171'.$id_customer.'">EDIT</a>';
+echo '<a href="customer_edit.php?id='.$id_customer.'">EDIT</a>';
 
 echo '</td>';
 

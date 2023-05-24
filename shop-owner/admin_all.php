@@ -158,7 +158,7 @@ if($status_admin=="yes"){echo 'อนุญาต';}else{echo 'ปิดกา�
 echo '</td>';
 echo '<td id="edit_2020'.$id_admin.'">';
 
-echo '<a href="admin_edit.php?id=171'.$id_admin.'">EDIT</a>';
+echo '<a href="admin_edit.php?id='.$id_admin.'">EDIT</a>';
 
 echo '</td>';
 

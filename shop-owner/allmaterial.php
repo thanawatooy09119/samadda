@@ -134,7 +134,7 @@ echo '<tr onmouseover="this.style.background=\'#ececec\'"  onmouseout="this.styl
 if($_status!="yes"){ echo ' style="color:#ececec;"';}
 echo '>';
 echo '<td>'.($x+1).'</td>';
-echo '<td>171'.$id_product.'</td>';
+echo '<td>'.$id_product.'</td>';
 echo '<th style="max-width:400px;text-align:center;">'.i_result($on,$x,"name_$TBNAME").'</th>';
 echo '<td>';
 echo number_format(i_result($on,$x,"stock_$TBNAME"));
@@ -144,8 +144,8 @@ echo '<td style="font-weight:bold;">'.number_format(i_result($on,$x,"price_$TBNA
 echo '<td>';
 if(i_result($on,$x,"status_$TBNAME")=="yes"){echo 'แสดง';}else{echo 'ไม่แสดง';}
 echo '</td>';
-echo '<td id="bill_171'.$id_product.'">';
-echo '<a href="edit_'.$TBNAME.'.php?id=171'.$id_product.'">EDIT</a>';
+echo '<td id="bill_'.$id_product.'">';
+echo '<a href="edit_'.$TBNAME.'.php?id='.$id_product.'">EDIT</a>';
 
 echo '</td>';
 
