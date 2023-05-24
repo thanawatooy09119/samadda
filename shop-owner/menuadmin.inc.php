@@ -8,8 +8,8 @@
 </div>
 
 <div class="dropdown">
-<!-- <h3><button class="dropbtn product">สินค้า/การผลิต<i class="fa fa-caret-down"></i></button></h3> -->
-  <!-- <div class="dropdown-content">
+<h3><button class="dropbtn product">สินค้า/การผลิต<i class="fa fa-caret-down"></i></button></h3>
+  <div class="dropdown-content">
 
   <span class="headlist"> manufacturing <i class="fa fa-angle-double-right "></i></span>    
     <a href="manufacturing_new.php"><i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มการผลิต (New manufacturing)</a> 
@@ -23,7 +23,7 @@
     <span class="headlist">ประเภทสินค้า<i class="fa fa-angle-double-right "></i></span>   
     <a href="category.php"><i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มประเภทสินค้า</a>
     <a href="all_category.php"><i class="fa fa-list" aria-hidden="true"></i> ประเภทสินค้าทั้งหมด</a> 
-    
+    <!-- <a href="all_manufacturing.php"><i class="fa fa-list" aria-hidden="true"></i> การผลิตทั้งหมด (All manufacturing)</a> -->
 
     <hr class="ihr" />
 
@@ -31,36 +31,41 @@
 
 
 
+    <!-- <span class="headlist"> materials <i class="fa fa-angle-double-right "></i></span> -->
     
+    <!-- <a href="add_material.php"><i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มวัสดุใหม่ (New material)</a> 
+    <a href="allmaterial.php"><i class="fa fa-list" aria-hidden="true"></i> วัสดุทั้งหมด (All Materials)</a>  
+    <hr class="ihr" /> -->
     
     
 
-  </div> -->
+  </div>
 </div>
 
 
 <div class="dropdown">
-  <!-- <h3><button class="dropbtn order">คำสั่งซื้อ <i class="fa fa-caret-down"></i></button></h3>
+  <h3><button class="dropbtn order">คำสั่งซื้อ <i class="fa fa-caret-down"></i></button></h3>
   <div class="dropdown-content">
     <a href="allorder.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i> คำสั่งซื้อสินค้า (Product Order)</a>
-    
-  </div> -->
+    <!-- <a href="allorder_material.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i> คำสั่งซื้อวัสดุ (Material Order)</a> -->
+  </div>
 </div>
 
 <div class="dropdown">
-<!-- <h3><button class="dropbtn report">สรุปรายงาน<i class="fa fa-caret-down"></i></button></h3>
+<h3><button class="dropbtn report">สรุปรายงาน<i class="fa fa-caret-down"></i></button></h3>
   <div class="dropdown-content">
 
   <span class="headlist"> financial <i class="fa fa-angle-double-right "></i></span>
 
-    
+    <!-- <a href="income.php"><i class="fa fa-line-chart" aria-hidden="true"></i> รายรับ (Income Report)</a> -->
+    <!-- <a href="expense.php"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> รายจ่าย (Expense Report)</a>     -->
     <a href="report.php"><i class="fa fa-bar-chart" aria-hidden="true"></i> สรุปรายรับ (Summarize Report)</a>
     <hr class="ihr" />
 
     <span class="headlist"> manufacturing <i class="fa fa-angle-double-right "></i></span>
     
     <a href="all_manufacturing.php"><i class="fa fa-area-chart" aria-hidden="true"></i> สรุปการผลิต (Manufacturing Report)</a>
-  </div> -->
+  </div>
 </div>
 
 
