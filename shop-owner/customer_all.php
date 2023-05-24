@@ -122,7 +122,8 @@ include "./menuadmin.inc.php";
     </th> 
 </tr>
 <?php
-$sql = "SELECT * FROM  `customer`";
+// $sql = "SELECT * FROM  `order` ORDER BY `order`.`id_order` DESC;";
+$sql = "SELECT * FROM  `customer` ORDER BY `customer`.`id_customer` DESC;";
 $on = $conn->query($sql);
 $_row = $on->num_rows;
 for($x=0;$x<$_row;$x++){

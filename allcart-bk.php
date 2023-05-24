@@ -1,4 +1,5 @@
-<?php session_start();
+<?php
+session_start();
 $all = $_SESSION['all'];
 
 if ($all >= 1) {
@@ -7,39 +8,15 @@ if ($all >= 1) {
     echo '<script>window.location.replace("./");</script>';
 };
 ?>
-
-<?php
-
-include("./connect.inc.php");
-include("./i_result.inc.php");
-
-$sql = "SELECT * FROM `$DBSOFTX`.`howto` WHERE  `howto`.`id_howto` =2 LIMIT 1 ;";
-$on = $conn->query($sql);
-
-
-?>
 <!DOCTYPE html>
 
 <head>
-    <meta name="theme-color" content="#505050">
-
-    <link rel="stylesheet" type="text/css" href="./noeditor.css">
-
-
-
-    <meta name="viewport" content="widtd=device-widtd, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/font-awesome.min.css">
 
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title><?= i_result($on, 0, "title_howto"); ?></title>
-    <meta name="keyword" content="<?= i_result($on, 0, "keyword_howto"); ?>">
-    <meta name="description" content="<?= i_result($on, 0, "des_howto"); ?>">
-    <meta name="author" content="nkclassic.com">
-    <meta name="copyright" content="nkclassic.com">
-    <meta name="robots" content="index, follow">
-
-
+    <title>All Cart</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link href="mobilestyle.css" rel="stylesheet" type="text/css" />
 
@@ -49,19 +26,19 @@ $on = $conn->query($sql);
 
 </head>
 
-<body onload="checker();">
+<body>
+
     <div class="main">
 
-        <?php include "header.inc.php"; ?>
+        <?php
+        include "header.inc.php";
+        // print_r("=========================");
+        ?>
 
-        <div class="container col-md-12">
+        <div class="Content" id="article">
             <?php
-
             if ($all != 0) {
-                print_r($all);
-                echo '"' . $_SESSION['code'] . '"';
             ?>
-                <!-- <h1>Hello World</h1> -->
                 <form action="insertcart.php" method="post" name="myform">
                     <table border="0" cellpadding="0" cellspacing="0" id="allproduct" align="center">
                         <tr>
@@ -112,6 +89,7 @@ $on = $conn->query($sql);
                                 <input type="hidden" name="total" id="total" value="<?= $all_price; ?>" />
                             </th>
                         </tr>
+
                         <tr style="color:red;">
                             <th colspan="4">รวมราคาทั้งสิ้น</th>
                             <th nowrap><span id="showtotal"><?= number_format($all_price); ?></span> บาท</th>
@@ -170,17 +148,18 @@ $on = $conn->query($sql);
                     </tr>';
                             } //end check login
                     ?>
-
                     </table>
                 </form>
+
+
             <?php
             } //end check all
             ?>
-
-            <!-- <h1>Hello World</h1> -->
         </div>
-        <?php include "infooter.inc.php"; ?>
+        <div class="Footer">
 
+            <?php include "infooter.inc.php"; ?>
+        </div>
     </div>
 
 </body>

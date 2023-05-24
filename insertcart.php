@@ -113,19 +113,19 @@ if($chk_ok=="ok"){
   
   
 echo '<i class="fa fa-check-circle biggreen"></i><br />';
-echo 'เราได้รับการยืนยันการสั่งซื้อจากท่านแล้ว  รหัสสั่งซื้อ : <b>171'.$order_id.'</b>';
+echo 'เราได้รับการยืนยันการสั่งซื้อจากท่านแล้ว  รหัสสั่งซื้อ : <b>'.$order_id.'</b>';
 echo '<br>';
 echo 'กรุณาชำระค่าสินค้า พร้อมยืนยันการชำระสินค้าเพื่อความรวดเร็วในการจัดส่งสินค้า';
 echo '<br>';
-echo '<b>ยืนยันการชำระค่าสินค้าทันที <a href="./confirm.php?order=171'.$order_id.'" class="">คลิก</a></b>';
+echo '<b>ยืนยันการชำระค่าสินค้าทันที <a href="./confirm.php?order='.$order_id.'" class="">คลิก</a></b>';
 echo '<br>';
 echo '<br>';
 
-// echo '<a href="javascript:return false;" onclick="printPage(\'mydetail.php?order=171'.$order_id.'\');" class="dontshowprn ibtn-orange fa fa-print"> พิมพ์</a>';
+// echo '<a href="javascript:return false;" onclick="printPage(\'mydetail.php?order='.$order_id.'\');" class="dontshowprn ibtn-orange fa fa-print"> พิมพ์</a>';
 
 echo '<script>
 setTimeout(function(){
-window.location.replace("./confirm.php?order=171'.$order_id.'");
+window.location.replace("./confirm.php?order='.$order_id.'");
 },180000);
 
 </script>';

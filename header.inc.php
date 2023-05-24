@@ -12,10 +12,11 @@ $_self = end(explode("/", $all_self));
 //$dir_current = end(explode("/",$dir_current ));
 
 
-$sql_category = "SELECT * FROM `category`";
+$sql_category = "select * from category";
+
 $on_category = $conn->query($sql_category);
-// print_r($on_category);
 $_rows_category = $on_category->num_rows;
+
 
 if ($_rows_category <= 0) {
   echo '<br><center>ไม่พบประเภทสินค้า</center>';
@@ -24,8 +25,8 @@ if ($_rows_category <= 0) {
 
 // // Fetch all categories into an array
 $categories = $on_category->fetch_all(MYSQLI_ASSOC);
-
 ?>
+
 <div class="Header">
 
 
@@ -59,15 +60,15 @@ $categories = $on_category->fetch_all(MYSQLI_ASSOC);
 
             // echo '<a href="product.php?id=' . $category_id . '" class="curent">' . $category_name . '</a>';
             echo '<a href="product.php?id=' . $category_id . '"';
-if ($_GET['id'] == $category_id) {
-    echo ' class="curent"';
-}
-echo '>' . $category_name . '</a>';
+            if ($_GET['id'] == $category_id) {
+              echo ' class="curent"';
+            }
+            echo '>' . $category_name . '</a>';
           }
           ?>
-         
-        
-       
+
+
+
 
         </div>
       </div>

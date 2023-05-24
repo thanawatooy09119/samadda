@@ -291,7 +291,7 @@ echo '            <a href="#" onclick="return false;" class="buy" data-panda="'.
 <hr />
 </div>
     <!-- <div class="Footer">
-          <?php include "infooter.inc.php";?>
+          <?php include "infooter.inc.php";?> 
     </div> -->
 </div>
 <div id="allmycart" <?php if(!$_SESSION['all']){echo 'style="display:none;"';}?>><a href="allcart.php"><?php if($_SESSION['all']){echo $_SESSION['all'];}else{ echo '0';}?>&nbsp;รายการ</a></div>

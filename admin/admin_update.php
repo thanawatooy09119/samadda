@@ -18,8 +18,9 @@ include "../i_result.inc.php";
 
 <?php
 
-$_list = explode("171",$_POST['idp']);
-$_id = $_list[1];
+// $_list = explode("",$_POST['idp']);
+// $_id = $_list[1];
+$_id = $_POST['idp'];
 ?>
 
     <meta http-equiv="refresh" content="3;URL=admin_edit.php?id=171<?=$_id;?>" />  

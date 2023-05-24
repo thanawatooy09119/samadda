@@ -136,10 +136,10 @@ $_status = i_result($on,$x,"status_order");
 $id_order = i_result($on,$x,"id_order");
 echo '<tr>';
 echo '<td>'.($x+1).'</td>';
-echo '<td>171'.$id_order.'</td>';
+echo '<td>'.$id_order.'</td>';
 echo '<td>'.i_result($on,$x,"time_order").'</td>';
 echo '<td>';
-echo '<a href="mydetail.php?order=171'.$id_order.'" target="_blank">';
+echo '<a href="mydetail.php?order='.$id_order.'" target="_blank">';
 
 echo i_result($on,$x,"list_order");
 echo ' รายการ ';
@@ -151,18 +151,18 @@ echo '</a></td>';
 echo '<td style="font-weight:bold;">'.number_format(i_result($on,$x,"price_order")).'</td>';
 
 
-echo '<td id="bill_171'.$id_order.'">';
+echo '<td id="bill_'.$id_order.'">';
 if($_status=="wait"){
 
     echo '(รอ) ';
-echo '<a href="confirm.php?order=171'.$id_order.'" class="st-wait">';
+echo '<a href="confirm.php?order='.$id_order.'" class="st-wait">';
 echo 'ยืนยันการชำระสินค้า';
 echo '</a>';
 
 }else
 if($_status=="checking"){
 
-// echo '<a href="#" class="st-checking" onclick="return false;" data-panda="171'.$id_order.'">';
+// echo '<a href="#" class="st-checking" onclick="return false;" data-panda="'.$id_order.'">';
 echo 'รอตรวจสอบ';
 // echo '</a>';
 
@@ -189,7 +189,7 @@ echo '<font color="#880000">ยกเลิกแล้ว</font>';
 echo '</td>';
 
 echo '<td>';
-    echo '<a href="javascript:return false;" onclick="printPage(\'mydetail.php?order=171'.$id_order.'\');" class="dontshowprn ibtn-orange">พิมพ์ <i class="fa fa-print"></i></a>';
+    echo '<a href="javascript:return false;" onclick="printPage(\'mydetail.php?order='.$id_order.'\');" class="dontshowprn ibtn-orange">พิมพ์ <i class="fa fa-print"></i></a>';
 echo '</td>';
 
 

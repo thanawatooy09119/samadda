@@ -51,8 +51,8 @@ $on = $conn->query($sql);
 <?=i_result($on,0,"heading_howto");?>
 </h1>
 <div id="mymap">
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7593.651507964396!2d102.78326929999999!3d17.893599400000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sth!2sth!4v1454227414469" width="400" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-</div>
+<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d929.0311650843543!2d104.3470762342677!3d16.48993894577804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313da12dced7a5df%3A0xb3fac9f01a56e3e2!2z4Lir4LiZ4Lit4LiH4Liq4Li54LiH4LmA4Lir4LiZ4Li34LitIOC4reC4s-C5gOC4oOC4rSDguKvguJnguK3guIfguKrguLnguIcg4Lih4Li44LiB4LiU4Liy4Lir4Liy4LijIOC4m-C4o-C4sOC5gOC4l-C4qOC5hOC4l-C4og!5e1!3m2!1sth!2sus!4v1684909995010!5m2!1sth!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d726.9337228379175!2d104.34700968486126!3d16.490017553340927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313da13ba050dc2b%3A0xb205afc711a6a5e7!2z4Lij4LmJ4Liy4LiZ4Lit4Liy4Lir4Liy4Lij4Liq4Li44LiU4LiV4Liy4LmB4Lil4LiI4Li04LmJ4Lih4LiI4Li44LmI4Lih!5e0!3m2!1sth!2sus!4v1684910171475!5m2!1sth!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 
 <?php
 $str = str_replace("../img","./img",i_result($on,0,"content_howto"));
