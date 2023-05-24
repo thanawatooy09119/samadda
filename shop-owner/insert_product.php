@@ -43,7 +43,9 @@ window.location.replace("add_product_sell.php");
     
 
 $_name = $_POST['namep'];
-$_type = $_POST['typep'];
+// $_type = $_POST['typep'];
+$_type = $_POST['category_name'];
+$_category_id = $_POST['category_id'];
 $_dprice = $_POST['dprice'];
 $_price = $_POST['price'];
 $_stock = $_POST['stockp'];
@@ -51,7 +53,7 @@ $_des = $_POST['desp'];
 
 
 //$sql = "UPDATE  `$DBSOFTX`.`order` SET  `status_order` =  '".$_status."' WHERE  `order`.`id_order` = '".$_id."' LIMIT 1 ;";
-$insert_sql = "INSERT INTO  `$DBSOFTX`.`product` (`id_product` ,`name_product` ,`des_product` ,`type_product` ,`stock_product` ,`dprice_product` ,`price_product` ,`img1` ,`img2` ,`img3` ,`img4` ,`img5`)VALUES (NULL ,  '$_name',  '$_des',  '$_type',  '$_stock',  '$_dprice',  '$_price',  '".$big_img[1]."',  '".$big_img[2]."', '".$big_img[3]."' , '".$big_img[4]."' , '".$big_img[5]."');";
+$insert_sql = "INSERT INTO  `$DBSOFTX`.`product` (`id_product` ,`name_product` ,`des_product` ,`type_product` ,`stock_product` ,`dprice_product` ,`price_product` ,`img1` ,`img2` ,`img3` ,`img4` ,`img5`, `category_id`)VALUES (NULL ,  '$_name',  '$_des',  '$_type',  '$_stock',  '$_dprice',  '$_price',  '".$big_img[1]."',  '".$big_img[2]."', '".$big_img[3]."' , '".$big_img[4]."' , '".$big_img[5]."' , '". $_category_id."');";
 $on = $conn->query($insert_sql);
 
 if($on){
