@@ -6,7 +6,7 @@
 <img src="../images/123456.jpg" alt="" width="50" height="30"> <a href="./" class="fa fa-home" aria-hidden="true">&nbsp;</a>   
     
 </div>
-
+ 
 <div class="dropdown">
 <h3><button class="dropbtn product">สินค้า/การผลิต<i class="fa fa-caret-down"></i></button></h3>
   <div class="dropdown-content">
@@ -109,7 +109,7 @@
 <div class="dropdown"><i class="fa fa-caret-down"></i></button>
   <div class="dropdown-content">
     <!-- <a href="admin_new.php"><i class="fa fa-user-plus"></i> เพิ่มผู้ดูแลระบบ (New Admin/CEO)</a> -->
-    <a href="admin_all.php"><i class="fa fa-users"></i> ผู้ดูแล ทั้งหมด (All Admin/CEO)</a>
+    <!-- <a href="admin_all.php"><i class="fa fa-users"></i> ผู้ดูแล ทั้งหมด (All Admin/CEO)</a> -->
     
     <a href="admin_setting.php"><i class="fa fa-cogs"></i> ตั้งค่าผู้ใช้งาน (Setting)</a>
     <a href="./logout.php" aria-hidden="true"><i ></i>ออกจากระบบ</a>
