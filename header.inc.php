@@ -43,7 +43,8 @@ $categories = $on_category->fetch_all(MYSQLI_ASSOC);
 
       <!-- <?php phpinfo(); ?> -->
 
-      <img src="images/123456.png" alt="" width="50" height="30"><a href="./" class="dropbtn2"><span></span><span class="dropbtn2">สมัดดาผ้าทอมือ</span></a>
+      <img src="images/123456.png" alt="" width="50" height="30">
+      <a href="./" class="dropbtn2"><span></span><span class="dropbtn2 ms-12">สมัดดาผ้าทอมือ</span></a>
       <span class="no">&nbsp;</span>
 
 
