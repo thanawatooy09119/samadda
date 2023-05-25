@@ -81,31 +81,41 @@ $(document).ready(function () {
             username.focus();
         }
 
-        if (password.val() == "") {
+        else if (password.val() == "") {
 
             password.fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
             password.focus();
         }
 
-        if (confirm.val() == "") {
+        else  if (confirm.val() == "") {
 
             confirm.fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
             confirm.focus();
         }
 
-        if (fullname.val() == "") {
+        else  if (fullname.val() == "") {
 
             fullname.fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
             fullname.focus();
         }
 
-        if (address.val() == "") {
+        else  if (address.val() == "") {
             address.fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
             address.focus();
         }
-    
-
-        if (password.val() != confirm.val()) {
+     
+       
+        else   if (tel.val() == "") {
+            tel.fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+            tel.focus();
+        }
+        else if (!/^([0-9])+$/i.test(tel.val())) {
+            tel.fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+            tel.focus();
+            $('.registel').text('กรุณากรอกตัวเลขเบอร์โทร');
+        }
+        
+        else  if (password.val() != confirm.val()) {
             $('.regisstatus').text('ยืนยันรหัสผ่านไม่ตรงกัน');
             confirm.fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
             confirm.focus();
