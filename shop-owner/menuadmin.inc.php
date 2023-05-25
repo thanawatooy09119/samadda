@@ -3,7 +3,7 @@
 <div id="admin" class="dontshowprn">
 
 <div class="dropdown">
-<img src="../images/123456.jpg" alt="" width="50" height="30"> <a href="./" class="fa fa-home" aria-hidden="true">&nbsp;</a>   
+<img src="../images/123456.png" alt="" width="50" height="30"> <a href="./" class="fa fa-home" aria-hidden="true">&nbsp;</a>   
     
 </div>
  
