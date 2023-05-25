@@ -197,7 +197,7 @@ $categories = $on_category->fetch_all(MYSQLI_ASSOC);
     <div class="ihr"></div>
     <input type="text" name="fullname" class="regisfullname" placeholder="ชื่อ - สกุล" />
     <input type="text" name="address" class="regisaddress" placeholder="ที่อยู่" />
-    <input type="text" name="tel" class="registel" placeholder="เบอร์โทร" />
+    <input type="text" name="tel" class="registel" placeholder="เบอร์โทร" maxlength="10" />
     <div class="ihr"></div>
 
     <input type="button" value="สมัครสมาชิก" class="regissubmit" />
