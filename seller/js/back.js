@@ -258,7 +258,9 @@ function update_status(code,status){
         status: status
     },
     function(data, status){
-    
+      // console.log("==================")
+      // console.log(data)
+      // console.log(status)
     
           
           if(data.trim()=='wait'){        
