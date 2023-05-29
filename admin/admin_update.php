@@ -40,7 +40,7 @@ $_id = $_POST['idp'];
     
     
 
-$_myid = $_list[1];
+$_myid = $_id;
 // $_myuser = $_POST['myuser'];
 $_mypass = $_POST['mypass'];
 $_myname = $_POST['myname'];

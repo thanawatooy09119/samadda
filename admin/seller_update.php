@@ -18,8 +18,8 @@ include "../i_result.inc.php";
 
 <?php
 
-$_list = explode("",$_POST['idp']);
-$_id = $_list[1];
+
+$_id = $_POST['idp'];
 
 
 $TB_NAME = "seller";
@@ -42,7 +42,7 @@ $TB_NAME = "seller";
     
     
 
-$_myid = $_list[1];
+$_myid = $_id;
 // $_myuser = $_POST['myuser'];
 $_mypass = $_POST['mypass'];
 $_myname = $_POST['myname'];
