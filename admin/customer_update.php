@@ -16,12 +16,9 @@ include "../i_result.inc.php";
 <head>
 
 
-<?php
 
-$_id =$_POST['idp'];
-?>
 
-    <meta http-equiv="refresh" content="3;URL=customer_edit.php?id=<?=$_id;?>" />  
+    <meta http-equiv="refresh" content="3;URL=customer_edit.php?id=<?=$_POST['idp'];?>" />  
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../css/font-awesome.min.css">
@@ -36,9 +33,9 @@ $_id =$_POST['idp'];
 <?php
     
     
-    
 
-$_myid = $_list[1];
+
+$_myid = $_POST['idp'];
 // $_myuser = $_POST['myuser'];
 $_mypass = $_POST['mypass'];
 $_myname = $_POST['myname'];

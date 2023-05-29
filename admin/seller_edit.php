@@ -69,20 +69,23 @@ document.getElementById('glr').innerHTML += "<a href=\""+im1+"\" target=\"_blank
 <?php 
 include "./menuadmin.inc.php";
 $_list = explode("",$_GET['id']);
-$_id = $_list[1];
-$TB_NAME = "seller";
-$sql = "select * from $TB_NAME where id_$TB_NAME = '$_id'";
+// $_id = $_list[1];
+// seller = "seller";
+// $sql = "select * from seller where id_seller = '$_id'";
+$id_seller = $_GET['id'];
+
+$sql = "select * from seller where id_seller = '$id_seller'";
 $on = $conn->query($sql);
 $_rows = $on->num_rows;
 if($_rows!=1){echo '<br><center>ไม่พบสมาชิก</center>'; exit();}
 
 
-$_status = i_result($on,0,"status_$TB_NAME");
+$_status = i_result($on,0,"status_seller");
 
 ?>
 
 
-<form action="<?=$TB_NAME;?>_update.php" method="post" name="m2" id="m2">
+<form action="<?=seller;?>_update.php" method="post" name="m2" id="m2">
 <table border="0" cellpadding="0" cellspacing="0" id="addproduct">
 <tr>
       <td>
@@ -90,7 +93,7 @@ $_status = i_result($on,0,"status_$TB_NAME");
 
       </td>
       <td>
-      <input type="text" name="myuser" value="<?=i_result($on,0,"user_$TB_NAME");?>" disabled />
+      <input type="text" name="myuser" value="<?=i_result($on,0,"user_seller");?>" disabled />
       <input type="hidden" name="idp" value="<?=$_GET['id'];?>" />
       
 
@@ -113,7 +116,7 @@ $_status = i_result($on,0,"status_$TB_NAME");
 
       </td>
       <td>
-      <input type="text" name="myname" value="<?=i_result($on,0,"name_$TB_NAME");?>" />
+      <input type="text" name="myname" value="<?=i_result($on,0,"name_seller");?>" />
       
 
       </td>
@@ -138,7 +141,7 @@ $_status = i_result($on,0,"status_$TB_NAME");
 
       </td>
       <td>
-      <input type="text" name="mytel" value="<?=i_result($on,0,"tel_$TB_NAME");?>" />
+      <input type="text" name="mytel" value="<?=i_result($on,0,"tel_seller");?>" />
       
 
       </td>
@@ -150,7 +153,7 @@ $_status = i_result($on,0,"status_$TB_NAME");
       </td>
       <td>
       <textarea cols="50" rows="5" name="myaddress">
-       <?=i_result($on,0,"address_$TB_NAME");?>
+       <?=i_result($on,0,"address_seller");?>
       </textarea>
 
       </td>
