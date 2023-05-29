@@ -13,6 +13,7 @@ include "../i_result.inc.php";
 ?>
 <?php
 
+$_id = $_POST['code'];
 $_status = $_POST['status'];
 
 $sql = "UPDATE  `$DBSOFTX`.`order` SET  `status_order` =  '".$_status."' WHERE  `order`.`id_order` = '".$_id."' LIMIT 1 ;";
