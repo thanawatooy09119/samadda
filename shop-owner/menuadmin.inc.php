@@ -43,13 +43,13 @@
 </div>
 
 
-<div class="dropdown">
+<!-- <div class="dropdown">
   <h3><button class="dropbtn order">คำสั่งซื้อ <i class="fa fa-caret-down"></i></button></h3>
   <div class="dropdown-content">
     <a href="allorder.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i> คำสั่งซื้อสินค้า (Product Order)</a>
-    <!-- <a href="allorder_material.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i> คำสั่งซื้อวัสดุ (Material Order)</a> -->
+    
   </div>
-</div>
+</div> -->
 
 <div class="dropdown">
 <h3><button class="dropbtn report">สรุปรายงาน<i class="fa fa-caret-down"></i></button></h3>
@@ -70,7 +70,7 @@
 
 
 
-<div class="dropdown">
+<!-- <div class="dropdown">
 <h3><button class="dropbtn article">ข่าวประชาสัมพันธ์ <i class="fa fa-caret-down"></i></button></h3>
   <div class="dropdown-content">
     <a href="content_new.php"><i class="fa fa-plus-circle" aria-hidden="true"></i> เขียนข่าวประชาสัมพันธ์ (New Content)</a>
@@ -78,7 +78,7 @@
     <a href="contact_edit.php"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> ติดต่อเรา (Contact Us Content)</a>
     <a href="content_all.php"><i class="fa fa-list" aria-hidden="true"></i> ข่าวประชาสัมพันธ์ทั้งหมด (All Content)</a>
   </div>
-</div>
+</div> -->
 
 
 <div class="dropdown">
