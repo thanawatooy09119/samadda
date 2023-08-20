@@ -87,25 +87,25 @@ $(document).ready(function () {
             password.focus();
         }
 
-        else  if (confirm.val() == "") {
+        else if (confirm.val() == "") {
 
             confirm.fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
             confirm.focus();
         }
 
-        else  if (fullname.val() == "") {
+        else if (fullname.val() == "") {
 
             fullname.fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
             fullname.focus();
         }
 
-        else  if (address.val() == "") {
+        else if (address.val() == "") {
             address.fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
             address.focus();
         }
-     
-       
-        else   if (tel.val() == "") {
+
+
+        else if (tel.val() == "") {
             tel.fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
             tel.focus();
         }
@@ -114,8 +114,8 @@ $(document).ready(function () {
             tel.focus();
             $('.registel').text('กรุณากรอกตัวเลขเบอร์โทร');
         }
-        
-        else  if (password.val() != confirm.val()) {
+
+        else if (password.val() != confirm.val()) {
             $('.regisstatus').text('ยืนยันรหัสผ่านไม่ตรงกัน');
             confirm.fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
             confirm.focus();
@@ -395,6 +395,7 @@ $(document).ready(function () {
         var myname = this.getAttribute('data-myname');
         var type = this.getAttribute('data-type');
         var price = this.getAttribute('data-price');
+        var product_id = this.getAttribute('data-product_id');
         var mydes = this.getAttribute('data-mydes');
         var dprice = this.getAttribute('data-dprice');
         var redprice = this.getAttribute('data-redprice');
@@ -409,6 +410,7 @@ $(document).ready(function () {
         document.getElementById('code').value = type + '-' + data;
         document.getElementById('namecode').value = myname;
         document.getElementById('price').value = price;
+        document.getElementById('product_id').value = product_id;
         //document.getElementById('showitem3').innerHTML = data;
         //alert(x);
 

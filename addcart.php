@@ -17,6 +17,7 @@ $_SESSION['namecode'][$_SESSION['all']] = namecode(trim($real_code));
 $_SESSION['size'][$_SESSION['all']] = $_POST['size'];
 $_SESSION['namesize'][$_SESSION['all']] = namesize(trim($_POST['size']));
 $_SESSION['qty'][$_SESSION['all']] = $_POST['qty'];
+$_SESSION['product_id'][$_SESSION['all']] = $_POST['product_id'];
 $_SESSION['price'][$_SESSION['all']] = $_POST['price'];
 //$_SESSION['size'] = $_POST['size'];
 //$_SESSION['qty'] = $_POST['qty'];

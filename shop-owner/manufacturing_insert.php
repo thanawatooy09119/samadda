@@ -15,24 +15,26 @@ $TB_NAME = "manufacturing";
 
 ?>
 
- <!DOCTYPE html>
+<!DOCTYPE html>
+
 <head>
 
 
 
-    <meta http-equiv="refresh" content="3;URL=all_<?=$TB_NAME;?>.php" />  
+    <meta http-equiv="refresh" content="3;URL=all_<?=$TB_NAME;?>.php" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../css/font-awesome.min.css">
-  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
 
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-<link rel="stylesheet" href="../style.css" type="text/css">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <link rel="stylesheet" href="../style.css" type="text/css">
 
 </head>
+
 <body>
-<?php
+    <?php
     
     
     
@@ -71,7 +73,7 @@ $chk_ok = "ok";
 
 ?>
 
-<div class="result"><?php
+    <div class="result"><?php
 if($chk_ok=="ok"){echo 'Create New '.$TB_NAME.' complete.';}else{
 
 echo 'Fail!';
@@ -81,14 +83,14 @@ echo $update_sql;
 }
 
 ?></div>
-<div <?php
+    <div <?php
  //if($chk_ok=="ok"){echo 'class="complete"';}else{
  echo 'class="loader"';
  
  //}
  
- ?>
- >&nbsp;</div>
- 
- </body>
- </html>
+ ?>>&nbsp;</div>
+
+</body>
+
+</html>
