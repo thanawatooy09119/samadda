@@ -6,80 +6,81 @@ include "./i_result.inc.php";
 <!DOCTYPE html>
 
 <head>
-      <meta name="theme-color" content="#505050">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="css/font-awesome.min.css">
+    <meta name="theme-color" content="#505050">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 
 
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>สินค้าทั้งหมด</title>
-      <link href="style.css" rel="stylesheet" type="text/css" />
-      <link href="mobilestyle.css" rel="stylesheet" type="text/css" />
-
-
-
-      <script src="js/jquery.min-1.12.4.js"></script>
-
-      <script src="js/show.js"></script>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>สินค้าทั้งหมด</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="mobilestyle.css" rel="stylesheet" type="text/css" />
 
 
 
+    <script src="js/jquery.min-1.12.4.js"></script>
+
+    <script src="js/show.js"></script>
 
 
 
-      <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
-      <script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+    <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet"
+        charset="utf-8" />
+    <script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
 <body>
-      <div class="main">
+    <div class="main">
 
-            <?php
+        <?php
             include "header.inc.php";
             ?>
-            <div class="Content" id="article">
+        <div class="Content" id="article">
 
-                  <div id="overlay" style="display:none;">
-                        <form action="addcart.php" method="post" name="sentcart" id="sentcart">
-                              <div class="addcart">
-                                    <span class="cancel">x</span>
-                                    <p id="showitem1">&nbsp;</p>
-                                    <p id="showitem2">&nbsp;</p>
+            <div id="overlay" style="display:none;">
+                <form action="addcart.php" method="post" name="sentcart" id="sentcart">
+                    <div class="addcart">
+                        <span class="cancel">x</span>
+                        <p id="showitem1">&nbsp;</p>
+                        <p id="showitem2">&nbsp;</p>
 
-                                    <p>
-                                          <input type="hidden" value="code" name="code" id="code">
-                                          <input type="hidden" value="0" name="price" id="price">
-                                          <input type="hidden" value="null" name="namecode" id="namecode">
-                                          <span class="inone">
-                                                ประเภท <select name="size">
-                                                      <option value="m">ทั่วไป</option>
-                                                </select>
+                        <p>
+                            <input type="hidden" value="code" name="code" id="code">
+                            <input type="hidden" value="0" name="price" id="price">
+                            <input type="hidden" value="null" name="namecode" id="namecode">
+                            <span class="inone">
+                                ประเภท <select name="size">
+                                    <option value="m">ทั่วไป</option>
+                                </select>
 
-                                                &nbsp;
-                                          </span>
-                                          จำนวน <select name="qty">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                                <option value="7">7</option>
-                                                <option value="8">8</option>
-                                                <option value="9">9</option>
-                                                <option value="10">10</option>
+                                &nbsp;
+                            </span>
+                            จำนวน <select name="qty">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
 
-                                          </select>
-                                          ตัว
-                                    <p>
-                                    <p>
-                                          <a href="#" class="buy2" onclick="return false;">เพิ่มลงในตะกร้าสินค้า</a>
-                                    <p>
-                              </div>
-                        </form>
-                  </div><!-- end overlay -->
+                            </select>
+                            ตัว
+                        <p>
+                        <p>
+                            <a href="#" class="buy2" onclick="return false;">เพิ่มลงในตะกร้าสินค้า</a>
+                        <p>
+                    </div>
+                </form>
+            </div><!-- end overlay -->
 
-                  <?php
+            <?php
                   $_id = "";
                   if ($_GET['id']) {
                         $_id = "and(category_id = '" . $_GET['id'] . "')";
@@ -140,11 +141,6 @@ include "./i_result.inc.php";
                         echo '</p>';
 
                         print '<p class="priceproduct">';
-                        // echo '
-                        //               ราคา <span class="del">'.number_format(i_result($on,$x,dprice_product),2).' บาท</span> 
-                        //     <br>        
-                        //        ลดเหลือ <b class="redprice">'.number_format(i_result($on,$x,price_product),2).' บาท</b>';
-                        // echo '</p>';
 
                         echo '       
        ราคา <b class="redprice">' . number_format(i_result($on, $x, price_product),) . ' บาท</b>';
@@ -161,9 +157,9 @@ include "./i_result.inc.php";
 
 
 
-                  <hr />
-                  <h2>ข่าวประชาสัมพันธ์</h2>
-                  <?php
+            <hr />
+            <h2>ข่าวประชาสัมพันธ์</h2>
+            <?php
 
 
                   $sql = "SELECT * FROM `$DBSOFTX`.`content` ORDER BY `id_content` DESC LIMIT 2";
@@ -191,20 +187,21 @@ include "./i_result.inc.php";
                   }
                   ?>
 
-                  <hr>
+            <hr>
 
-                  <a href="story.php">บทความที่น่าสนใจอื่นๆ</a>
+            <a href="story.php">บทความที่น่าสนใจอื่นๆ</a>
 
-                  <hr />
-            </div>
-            <!-- <div class="Footer">
+            <hr />
+        </div>
+        <!-- <div class="Footer">
 
     <?php include "infooter.inc.php"; ?>
     </div> -->
-      </div>
-      <div id="allmycart" <?php if (!$_SESSION['all']) {
+    </div>
+    <div id="allmycart" <?php if (!$_SESSION['all']) {
                                     echo 'style="display:none;"';
-                              } ?>><a href="allcart.php"><?php if ($_SESSION['all']) {
+                              } ?>><a
+            href="allcart.php"><?php if ($_SESSION['all']) {
                                                                                                                         echo $_SESSION['all'];
                                                                                                                   } else {
                                                                                                                         echo '0';

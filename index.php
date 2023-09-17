@@ -147,11 +147,6 @@ include "./i_result.inc.php";
         echo '</p>';
 
         print '<p class="priceproduct">';
-        // echo '
-        //               ราคา <span class="del">'.number_format(i_result($on,$x,dprice_product),2).' บาท</span> 
-        //     <br>        
-        //        ลดเหลือ <b class="redprice">'.number_format(i_result($on,$x,price_product),2).' บาท</b>';
-        // echo '</p>';
 
         echo '     
        ราคา <b class="redprice">' . number_format(i_result($on, $x, price_product),) . ' บาท</b>';
@@ -271,11 +266,6 @@ foreach ($_recomment as $y => $y_value) {
     echo '</p>';
 
     print '<p class="priceproduct">';
-    // echo '
-    //               ราคา <span class="del">'.number_format(i_result($on,$x,dprice_product),2).' บาท</span> 
-    //     <br>        
-    //        ลดเหลือ <b class="redprice">'.number_format(i_result($on,$x,price_product),2).' บาท</b>';
-    // echo '</p>';
 
     echo 'ราคา <b class="redprice">' . number_format(i_result($on, $x, price_product),) . ' บาท</b>';
     echo '</p>';

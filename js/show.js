@@ -399,7 +399,9 @@ $(document).ready(function () {
         var mydes = this.getAttribute('data-mydes');
         var dprice = this.getAttribute('data-dprice');
         var redprice = this.getAttribute('data-redprice');
-        var allprice = ' ราคา <span class="del">' + numberWithCommas(dprice) + '</span> ลดเหลือ  <span class="redprice">' + numberWithCommas(redprice) + '  บาท</span>';
+        var allprice = 
+        // ' ราคาเงินลดเหลือ <span class="del">' + numberWithCommas(dprice) + 
+        '</span> ราคา <span class="redprice">' + numberWithCommas(redprice) + '  บาท</span>';
         //alert(price);
         var img = this.getAttribute('data-img');
         document.getElementById('showitem1').innerHTML = '<b>' + myname + '</b><br /><img src="img/thumbnails_' + img + '" style="width:90px;border-radius:5px;" ><br />' + allprice;
