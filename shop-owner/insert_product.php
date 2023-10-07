@@ -12,29 +12,30 @@ include "../connect.inc.php";
 include "../i_result.inc.php";
 ?>
 
- <!DOCTYPE html>
+<!DOCTYPE html>
+
 <head>
 
 
 
-    <meta http-equiv="refresh" content="3;URL='add_product.php'" />  
+    <meta http-equiv="refresh" content="3;URL='add_product.php'" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../css/font-awesome.min.css">
-  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
 
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-<link rel="stylesheet" href="../style.css" type="text/css">
-<script>
-setTimeout(function(){
-window.location.replace("add_product_sell.php");
-},3000);
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-</script>
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <script>
+    setTimeout(function() {
+        window.location.replace("add_product.php");
+    }, 3000);
+    </script>
 </head>
+
 <body>
-<?php
+    <?php
     for($i=1;$i<=5;$i++){
     $big_img[$i] = str_replace("../img/","",$_POST['big'.$i]);
     $small_img[$i] = str_replace("../img/","",$_POST['small'.$i]);
@@ -67,21 +68,21 @@ $chk_ok = "no";
 
 ?>
 
-<div class="result"><?php
+    <div class="result"><?php
 if($chk_ok=="ok"){echo 'Add product complete.';}else{
 echo 'Fail!';
 
 }
 
 ?></div>
-<div <?php
+    <div <?php
  //if($chk_ok=="ok"){echo 'class="complete"';}else{
  echo 'class="loader"';
  
  //}
  
- ?>
- >&nbsp;</div>
- 
- </body>
- </html>
+ ?>>&nbsp;</div>
+
+</body>
+
+</html>

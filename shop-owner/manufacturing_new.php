@@ -90,6 +90,12 @@ $categories = $on_category->fetch_all(MYSQLI_ASSOC);
 $_type = "";
 
 ?>
+    <br><br>
+    <div>
+        <div style="font-size: 16px; font-weight: bold; text-align: center;">
+            เพิ่มการผลิต
+        </div>
+    </div><br>
 
 
     <form action="<?=$TB_NAME;?>_insert.php" method="post" name="m2" id="m2">

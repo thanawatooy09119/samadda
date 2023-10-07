@@ -13,115 +13,123 @@ include "../connect.inc.php";
 include "../i_result.inc.php";
 ?>
 <!DOCTYPE html>
+
 <head>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../css/font-awesome.min.css">
-  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
 
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-<link rel="stylesheet" href="../style.css" type="text/css">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-<script src="../js/jquery.min-1.12.4.js"></script>
+    <link rel="stylesheet" href="../style.css" type="text/css">
 
-<script src="./js/back.js"></script>
+    <script src="../js/jquery.min-1.12.4.js"></script>
+
+    <script src="./js/back.js"></script>
 
 
 
 </head>
+
 <body>
 
 
-<?php 
+    <?php 
 include "./menuadmin.inc.php";
 ?>
 
-<div id="overlay-wait" style="display:none;">
-<form action="#" method="post" name="form-wait" id="form-wait">
-<div class="addcart">
-<span class="exit-wait">x</span>
+    <div id="overlay-wait" style="display:none;">
+        <form action="#" method="post" name="form-wait" id="form-wait">
+            <div class="addcart">
+                <span class="exit-wait">x</span>
 
-<p>
-<a href="#" class="yes-wait" onclick="return false;" >ยืนยันการชำระเงิน</a>
+                <p>
+                    <a href="#" class="yes-wait" onclick="return false;">ยืนยันการชำระเงิน</a>
 
-<a href="#" class="cancel-wait" onclick="return false;" >ยกเลิกรายการ</a>
-
-
-<input type="hidden" value="code" name="code_wait" id="code_wait">
+                    <a href="#" class="cancel-wait" onclick="return false;">ยกเลิกรายการ</a>
 
 
-</p>
-</div>
-</form>
-</div><!-- end overlay -->
+                    <input type="hidden" value="code" name="code_wait" id="code_wait">
 
 
-<div id="overlay-check" style="display:none;">
-<form action="addcart.php" method="post" name="sentcart" id="form-check">
-<div class="addcart">
-<span class="exit-check">x</span>
-
-<p>
-<a href="#" class="yes-check" onclick="return false;" >หลักฐานถูกต้อง</a>
-
-<a href="#" class="cancel-check" onclick="return false;" >ยกเลิกรายการ</a>
+                </p>
+            </div>
+        </form>
+    </div><!-- end overlay -->
 
 
-<input type="hidden" value="code" name="code_check" id="code_check">
+    <div id="overlay-check" style="display:none;">
+        <form action="addcart.php" method="post" name="sentcart" id="form-check">
+            <div class="addcart">
+                <span class="exit-check">x</span>
+
+                <p>
+                    <a href="#" class="yes-check" onclick="return false;">หลักฐานถูกต้อง</a>
+
+                    <a href="#" class="cancel-check" onclick="return false;">ยกเลิกรายการ</a>
 
 
-</p>
-</div>
-</form>
-</div><!-- end overlay -->
-
-<div id="overlay-send" style="display:none;">
-<form action="addcart.php" method="post" name="sentcart" id="form-send">
-<div class="addcart">
-<span class="exit-send">x</span>
-
-<p>
-<a href="#" class="yes-send" onclick="return false;" >ส่งสินค้าเรียบร้อย</a>
-
-<a href="#" class="cancel-send" onclick="return false;" >ยกเลิกรายการ</a>
+                    <input type="hidden" value="code" name="code_check" id="code_check">
 
 
-<input type="hidden" value="code" name="code_send" id="code_send">
+                </p>
+            </div>
+        </form>
+    </div><!-- end overlay -->
+
+    <div id="overlay-send" style="display:none;">
+        <form action="addcart.php" method="post" name="sentcart" id="form-send">
+            <div class="addcart">
+                <span class="exit-send">x</span>
+
+                <p>
+                    <a href="#" class="yes-send" onclick="return false;">ส่งสินค้าเรียบร้อย</a>
+
+                    <a href="#" class="cancel-send" onclick="return false;">ยกเลิกรายการ</a>
 
 
-</p>
-</div>
-</form>
-</div><!-- end overlay -->
+                    <input type="hidden" value="code" name="code_send" id="code_send">
 
-<br>
 
-<table border="0" cellpadding="0" cellspacing="0" id="allorder" align="center">
-<tr>
-    <!-- <th>
+                </p>
+            </div>
+        </form>
+    </div><!-- end overlay -->
+
+    <br>
+    <br><br>
+    <div>
+        <div style="font-size: 16px; font-weight: bold; text-align: center;">
+            รายการสินค้าทั้งหมด
+        </div>
+    </div><br>
+
+    <table border="0" cellpadding="0" cellspacing="0" id="allorder" align="center">
+        <tr>
+            <!-- <th>
               ลำดับ
     </th> -->
-    <th>
-              รหัส
-    </th>
-    <th>
-    สินค้า
-    </th>
-    <th>
-             สต็อก
-    </th>    
-    <th>
-             ราคา
-    </th>      
-    <th>
-             สถานะสินค้า
-    </th>     
-    <th>
-             แก้ไข
-    </th> 
-</tr>
-<?php
+            <th>
+                รหัส
+            </th>
+            <th>
+                สินค้า
+            </th>
+            <th>
+                สต็อก
+            </th>
+            <th>
+                ราคา
+            </th>
+            <th>
+                สถานะสินค้า
+            </th>
+            <th>
+                แก้ไข
+            </th>
+        </tr>
+        <?php
 $sql = "SELECT * FROM  `product` ORDER BY id_product DESC";
 $on = $conn->query($sql);
 $_row = $on->num_rows;
@@ -157,8 +165,9 @@ echo '</tr>';
 }
 ?>
 
-</table>
-<br>
+    </table>
+    <br>
 
 </body>
+
 </html>

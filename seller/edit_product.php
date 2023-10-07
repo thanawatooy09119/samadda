@@ -119,7 +119,12 @@ $_status = i_result($on, 0, status_product);
 // $_status = i_result($on,0,status_product);
 
 ?>
-
+    <br><br>
+    <div>
+        <div style="font-size: 16px; font-weight: bold; text-align: center;">
+            แก้ไขข้อมูลสินค้า
+        </div>
+    </div><br>
 
     <form action="update_product.php" method="post" name="m2" id="m2">
         <table border="0" cellpadding="0" cellspacing="0" id="addproduct">

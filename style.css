@@ -1,6 +1,6 @@
  @media print{
  .dontshowprn{
- display:none;
+ display:none; 
  
  }
  
@@ -33,7 +33,7 @@ div > * {
 .Header{
 position:fixed;
 z-index:9000;
-background-color : rgb(250, 114, 2);
+background-color : rgb(64, 75, 152);
 /* background-color : rgb(255, 217, 0); */
 margin:0px auto;
 top:0;
@@ -62,7 +62,7 @@ color:#000000;
 
 
 .inheader a:link, .inheader a:visited{
-color:#070707;
+color:#ffffff;
 text-decoration:none;
 font-weight:bold;
 }
@@ -197,7 +197,7 @@ background-color : #ffffff;
 .Content a:link.buy,.Content a:visited.buy, .Content a:link.buy2,.Content a:visited.buy2, .Content a:link.buy3,.Content a:visited.buy3{
 display:block;
 color:#ececec;
-background:rgb(253, 72, 40);
+background:rgba(253, 72, 40, 0.895);
 padding:10px;
 margin:10px;
 font-size:1.2em;
@@ -209,7 +209,7 @@ text-decoration:none;
 .Content a:hover.buy, .Content a:hover.buy2, .Content a:hover.buy3{
 display:block;
 color:#fff;
-background:#ffc400;
+background:rgb(148, 1, 1);
 padding:10px;
 margin:10px;
 font-size:1.2em;
@@ -1017,7 +1017,7 @@ text-align:left;
 		/* Style The Dropdown Button */
 .dropbtn2.product{
     background-color: #ffffff;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 16px;
     font-size: 16px;
     border: none;
@@ -1026,7 +1026,7 @@ text-align:left;
 
 .dropbtn2.article{
     background-color: #91c2f2;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 16px;
     font-size: 16px;
     border: none;
@@ -1044,9 +1044,9 @@ text-align:left;
 .dropdown-content2 {
     display: none;
     position: absolute;
-background-color : rgba(254, 254, 254, 0.902);
+background-color : rgba(84, 93, 162, 0.854);
     min-width: 240px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.507);
     z-index: 1;
     text-align:left;
 }
@@ -1071,7 +1071,7 @@ background-color : rgba(254, 254, 254, 0.902);
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content2 a:hover,.dropdown-content2 a.curent {background-color: rgb(127, 1, 22);}
+.dropdown-content2 a:hover,.dropdown-content2 a.curent {background-color: rgb(64, 75, 152);}
 
 /* Show the dropdown menu on hover */
 .dropdown2:hover .dropdown-content2 {

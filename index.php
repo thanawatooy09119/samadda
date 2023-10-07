@@ -25,6 +25,7 @@ include "./i_result.inc.php";
 </head>
 
 <body>
+
     <div class="main">
 
         <!-- <img src="images/555.jpg"> -->
@@ -34,10 +35,7 @@ include "./i_result.inc.php";
 
 
         <div class="container col-md-12">
-            <img src="images/105.jpg" alt="Forest" class="w3-opacity-min" width="850" height="300">
-
-
-
+            <img src="images/123.png " alt="Forest" class="w3-opacity-min" width="850" height="300">
         </div>
 
 
@@ -300,3 +298,15 @@ foreach ($_recomment as $y => $y_value) {
 </body>
 
 </html>
+
+<style>
+/* ส่วนขอบด้านซ้ายและขวาเป็นสีส้ม */
+body {
+    background-color: white;
+}
+
+/* ส่วนของพื้นหลังตรงกลางเป็นสีขาว */
+.container {
+    background-color: rgb(64, 75, 152);
+}
+</style>

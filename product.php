@@ -33,54 +33,53 @@ include "./i_result.inc.php";
 </head>
 
 <body>
-    <div class="main">
+    <div class="main"></div>
+    <?php
+            include "header.inc.php";
+            ?> <div class="Content" id="article">
+
+
+        <div id="overlay" style="display:none;">
+            <form action="addcart.php" method="post" name="sentcart" id="sentcart">
+                <div class="addcart">
+                    <span class="cancel">x</span>
+                    <p id="showitem1">&nbsp;</p>
+                    <p id="showitem2">&nbsp;</p>
+
+                    <p>
+                        <input type="hidden" value="code" name="code" id="code">
+                        <input type="hidden" value="0" name="price" id="price">
+                        <input type="hidden" value="null" name="namecode" id="namecode">
+                        <span class="inone">
+                            ประเภท <select name="size">
+                                <option value="m">ทั่วไป</option>
+                            </select>
+
+                            &nbsp;
+                        </span>
+                        จำนวน <select name="qty">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+
+                        </select>
+                        ตัว
+                    <p>
+                    <p>
+                        <a href="#" class="buy2" onclick="return false;">เพิ่มลงในตะกร้าสินค้า</a>
+                    <p>
+                </div>
+            </form>
+        </div><!-- end overlay -->
 
         <?php
-            include "header.inc.php";
-            ?>
-        <div class="Content" id="article">
-
-            <div id="overlay" style="display:none;">
-                <form action="addcart.php" method="post" name="sentcart" id="sentcart">
-                    <div class="addcart">
-                        <span class="cancel">x</span>
-                        <p id="showitem1">&nbsp;</p>
-                        <p id="showitem2">&nbsp;</p>
-
-                        <p>
-                            <input type="hidden" value="code" name="code" id="code">
-                            <input type="hidden" value="0" name="price" id="price">
-                            <input type="hidden" value="null" name="namecode" id="namecode">
-                            <span class="inone">
-                                ประเภท <select name="size">
-                                    <option value="m">ทั่วไป</option>
-                                </select>
-
-                                &nbsp;
-                            </span>
-                            จำนวน <select name="qty">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-
-                            </select>
-                            ตัว
-                        <p>
-                        <p>
-                            <a href="#" class="buy2" onclick="return false;">เพิ่มลงในตะกร้าสินค้า</a>
-                        <p>
-                    </div>
-                </form>
-            </div><!-- end overlay -->
-
-            <?php
                   $_id = "";
                   if ($_GET['id']) {
                         $_id = "and(category_id = '" . $_GET['id'] . "')";
@@ -141,7 +140,7 @@ include "./i_result.inc.php";
                         echo '</p>';
 
                         print '<p class="priceproduct">';
-
+ 
                         echo '       
        ราคา <b class="redprice">' . number_format(i_result($on, $x, price_product),) . ' บาท</b>';
                         echo '</p>';
@@ -157,9 +156,9 @@ include "./i_result.inc.php";
 
 
 
-            <hr />
-            <h2>ข่าวประชาสัมพันธ์</h2>
-            <?php
+        <hr />
+        <h2>ข่าวประชาสัมพันธ์</h2>
+        <?php
 
 
                   $sql = "SELECT * FROM `$DBSOFTX`.`content` ORDER BY `id_content` DESC LIMIT 2";
@@ -187,13 +186,13 @@ include "./i_result.inc.php";
                   }
                   ?>
 
-            <hr>
+        <hr>
 
-            <a href="story.php">บทความที่น่าสนใจอื่นๆ</a>
+        <a href="story.php">บทความที่น่าสนใจอื่นๆ</a>
 
-            <hr />
-        </div>
-        <!-- <div class="Footer">
+        <hr />
+    </div>
+    <!-- <div class="Footer">
 
     <?php include "infooter.inc.php"; ?>
     </div> -->
@@ -209,3 +208,15 @@ include "./i_result.inc.php";
 </body>
 
 </html>
+
+<style>
+/* ส่วนขอบด้านซ้ายและขวาเป็นสีส้ม */
+body {
+    background-color: white;
+}
+
+/* ส่วนของพื้นหลังตรงกลางเป็นสีขาว */
+.container {
+    background-color: rgb(64, 75, 152);
+}
+</style>

@@ -89,10 +89,15 @@ include "../i_result.inc.php";
   // print_r($categories);
   $_type = "";
   ?>
-
+    <br><br>
+    <div>
+        <div style="font-size: 16px; font-weight: bold; text-align: center;">
+            เพิ่มสินค้าใหม่
+        </div>
+    </div><br>
 
     <form action="insert_product.php" method="post" name="m2" id="m2">
-        <table border="0" cellpadding="0" cellspacing="0" id="addproduct">
+        <table border="0" cellpadding="0" cellspacing="0" id="addproduct" style="text-align: center;">
             <tr>
                 <td>
                     ชื่อสินค้า :
@@ -133,7 +138,7 @@ include "../i_result.inc.php";
 
                 </td>
                 <td>
-                    <!-- <input type="text" name="dprice" style="color:#a00;text-decoration:line-through;" placeholder="ราคาปกติ"> -->
+
                     <input type="text" name="price" placeholder="ราคา">
 
                 </td>
@@ -160,7 +165,6 @@ include "../i_result.inc.php";
 
                 </td>
             </tr>
-
             <tr>
                 <td colspan="2" align="center" style="text-align:center;">
                     รูปภาพ (ไม่เกิน 5 รูป) :
