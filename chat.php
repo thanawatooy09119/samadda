@@ -33,7 +33,7 @@ function update()
     setTimeout('update()', 1000);
 }
  
-$(document).ready(
+$(document).ready(//asdasdawdasdawdawd
 
  
 function() 
